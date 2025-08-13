@@ -1,3 +1,16 @@
+- [x] Reservas
+  - [x] cvcrm_listar_reservas_api
+  - [x] cvcrm_retornar_reserva_api
+  - [x] cvcrm_retornar_reserva_regras_comissao_api
+  - [x] cvcrm_cadastrar_reserva_api
+  - [x] cvcrm_atualizar_reserva_api
+  - [x] cvcrm_alterar_situacao_reserva_api
+  - [x] cvcrm_informar_venda_reserva_api
+  - [x] cvcrm_listar_distratos_reservas_api
+  - [x] cvcrm_alterar_situacao_reserva_distrato_api
+  - [x] cvcrm_listar_solicitacoes_distrato_reservas_api
+  - [x] cvcrm_solicitar_distrato_reserva_api
+  - [x] cvcrm_listar_contratos_reserva_api
 # Checklist de JSONs CV CRM
 
 - [x] Atendimento API

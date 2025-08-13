@@ -1,0 +1,26 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/comercial/reservas",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "query": {
+      "pode_faturar": { "type": "string", "description": "S ou N para filtrar por pode faturar" },
+      "vendida": { "type": "string", "description": "S ou N para filtrar por vendida" },
+      "retornar_integradas": { "type": "string", "description": "S ou N para incluir reservas já integradas" },
+      "offset": { "type": "integer", "description": "Registro inicial (paginação)" },
+      "limit": { "type": "integer", "description": "Quantidade de registros a retornar" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url 'https://integracao.cvcrm.com.br/api/v1/comercial/reservas?vendida=S&limit=50&offset=0' \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "Lista de reservas", "body": { "type": "array", "items": { "type": "object" } } }
+  }
+}
+
+
