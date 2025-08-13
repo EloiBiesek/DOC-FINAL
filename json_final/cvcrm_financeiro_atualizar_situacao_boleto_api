@@ -1,0 +1,20 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/financeiro/boleto/informar-situacao",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": { "idboleto": { "type": "integer", "required": true }, "situacao": { "type": "string", "required": true } }
+  },
+  "examples": {
+    "curl": "curl --request PUT \\\n+--url https://integracao.cvcrm.com.br/api/v1/cv/financeiro/boleto/informar-situacao \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "idboleto": 777,\\n  "situacao": "Pago"\\n}'"
+  },
+  "responses": { "200": { "description": "Situação do boleto atualizada" }, "400": { "description": "Erro ao atualizar situação" } }
+}
+
+

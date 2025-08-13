@@ -1,0 +1,23 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/financeiro/boleto/upload",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "multipart/form-data" }
+    },
+    "formData": {
+      "idreserva": { "type": "integer", "required": true },
+      "arquivo": { "type": "file", "description": "Arquivo do boleto", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/cv/financeiro/boleto/upload \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--form 'idreserva=12345' \\\n+--form 'arquivo=@boleto.pdf'"
+  },
+  "responses": { "200": { "description": "Boleto salvo para o portal" }, "400": { "description": "Erro no upload do boleto" } }
+}
+
+

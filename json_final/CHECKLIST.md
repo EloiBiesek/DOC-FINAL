@@ -1,3 +1,11 @@
+- [x] Financeiro
+  - [x] cvcrm_listar_pagamentos_parcela_reserva_api
+  - [x] cvcrm_alterar_pagamento_parcela_reserva_api
+  - [x] cvcrm_financeiro_boleto_upload_api
+  - [x] cvcrm_financeiro_listar_boletos_reserva_api
+  - [x] cvcrm_financeiro_atualizar_situacao_boleto_api
+  - [x] cvcrm_financeiro_extrato_upload_api
+  - [x] cvcrm_financeiro_ir_upload_api
 - [x] Reservas
   - [x] cvcrm_listar_reservas_api
   - [x] cvcrm_retornar_reserva_api

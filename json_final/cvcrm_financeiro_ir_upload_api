@@ -1,0 +1,23 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/financeiro/informe-rendimentos/upload",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "multipart/form-data" }
+    },
+    "formData": {
+      "idunidade": { "type": "integer", "required": true },
+      "arquivo": { "type": "file", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/cv/financeiro/informe-rendimentos/upload \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--form 'idunidade=999' \\\n+--form 'arquivo=@ir.pdf'"
+  },
+  "responses": { "200": { "description": "Informe de rendimentos salvo para o portal" }, "400": { "description": "Erro no upload do IR" } }
+}
+
+
