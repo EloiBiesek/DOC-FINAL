@@ -1,3 +1,19 @@
+- [x] Portal do Cliente - Financeiro
+  - [x] cvcrm_portal_financeiro_listar_boletos_segunda_via_api
+  - [x] cvcrm_portal_financeiro_gerar_boleto_api
+  - [x] cvcrm_portal_financeiro_listar_unidades_ir_api
+  - [x] cvcrm_portal_financeiro_enviar_ir_api
+  - [x] cvcrm_portal_financeiro_baixar_ir_api
+  - [x] cvcrm_portal_financeiro_listar_extrato_api
+  - [x] cvcrm_portal_financeiro_gerar_extrato_api
+  - [x] cvcrm_portal_financeiro_retornar_saldo_devedor_api
+  - [x] cvcrm_portal_financeiro_enviar_extrato_email_api
+  - [x] cvcrm_portal_financeiro_listar_parcelas_antecipacao_api
+  - [x] cvcrm_portal_financeiro_listar_parcelas_confirmadas_api
+  - [x] cvcrm_portal_financeiro_simular_antecipacao_api
+  - [x] cvcrm_portal_financeiro_efetuar_antecipacao_api
+  - [x] cvcrm_portal_financeiro_listar_reparcelamentos_api
+  - [x] cvcrm_portal_financeiro_efetuar_reparcelamento_api
 - [x] Portal do Cliente - Unidades
   - [x] cvcrm_portal_listar_unidades_api
   - [x] cvcrm_portal_retornar_unidade_api

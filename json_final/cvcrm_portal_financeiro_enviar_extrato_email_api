@@ -1,0 +1,14 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/financeiro/extrato/enviar",
+  "parameters": {
+    "headers": { "authorization": { "type": "string", "description": "Bearer <JWT>", "required": true } }
+  },
+  "examples": {
+    "curl": "curl --request PUT \\\n+--url https://integracao.cvcrm.com.br/api/v1/cliente/financeiro/extrato/enviar \\\n+--header 'accept: application/json' \\\n+--header 'authorization: Bearer SEU_TOKEN'"
+  },
+  "responses": { "200": { "description": "Extrato enviado por e-mail" } }
+}
+
+

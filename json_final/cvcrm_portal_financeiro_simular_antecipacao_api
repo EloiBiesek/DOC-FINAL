@@ -1,0 +1,13 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/financeiro/calcular-antecipacao",
+  "parameters": {
+    "headers": { "authorization": { "type": "string", "description": "Bearer <JWT>", "required": true }, "accept": { "type": "string", "description": "application/json" }, "content-type": { "type": "string", "description": "application/json" } },
+    "body": { "idunidade": { "type": "integer", "required": true }, "parcelas": { "type": "array", "items": { "type": "integer" }, "required": true } }
+  },
+  "examples": { "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/cliente/financeiro/calcular-antecipacao \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'authorization: Bearer SEU_TOKEN' \\\n+--data '{\\n  "idunidade": 999,\\n  "parcelas": [1,2,3]\\n}'" },
+  "responses": { "200": { "description": "Simulação de antecipação" }, "400": { "description": "Erro na simulação" } }
+}
+
+

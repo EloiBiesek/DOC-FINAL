@@ -1,0 +1,22 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/financeiro/boleto/gerar/{idboleto}",
+  "parameters": {
+    "headers": {
+      "authorization": { "type": "string", "description": "Bearer <JWT>", "required": true }
+    },
+    "path": {
+      "idboleto": { "type": "integer", "description": "ID do boleto", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cliente/financeiro/boleto/gerar/777 \\\n+--header 'accept: application/json' \\\n+--header 'authorization: Bearer SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "URL do PDF do boleto gerado", "body": { "type": "object", "properties": { "url": { "type": "string" } } } },
+    "404": { "description": "Boleto não encontrado" }
+  }
+}
+
+
