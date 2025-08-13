@@ -1,0 +1,28 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/cvio/bloco",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "idempreendimento": { "type": "integer", "description": "ID do empreendimento", "required": true },
+      "idetapa": { "type": "integer", "description": "ID da etapa", "required": true },
+      "idbloco_int": { "type": "string", "description": "Identificador do bloco no sistema legado" },
+      "nome": { "type": "string", "description": "Nome do bloco", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/cvio/bloco \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "idempreendimento": 123,\\n  "idetapa": 10,\\n  "nome": "Bloco A"\\n}'"
+  },
+  "responses": {
+    "200": { "description": "Bloco cadastrado/atualizado" },
+    "400": { "description": "Erro ao cadastrar bloco" }
+  }
+}
+
+

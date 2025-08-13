@@ -80,4 +80,11 @@
   - [x] cvcrm_listar_corretores_api
   - [x] cvcrm_cadastrar_corretor_pj_api
 
+- [x] Empreendimentos
+  - [x] cvcrm_cadastrar_empreendimento_api
+  - [x] cvcrm_listar_empreendimentos_api
+  - [x] cvcrm_retornar_empreendimento_api
+  - [x] cvcrm_cadastrar_etapa_api
+  - [x] cvcrm_cadastrar_bloco_api
+
 

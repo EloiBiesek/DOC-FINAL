@@ -1,0 +1,27 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/cvio/etapa",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "idempreendimento": { "type": "integer", "description": "ID do empreendimento", "required": true },
+      "idetapa_int": { "type": "string", "description": "Identificador da etapa no sistema legado" },
+      "nome": { "type": "string", "description": "Nome da etapa", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/cvio/etapa \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "idempreendimento": 123,\\n  "nome": "Etapa 1"\\n}'"
+  },
+  "responses": {
+    "200": { "description": "Etapa cadastrada/atualizada" },
+    "400": { "description": "Erro ao cadastrar etapa" }
+  }
+}
+
+
