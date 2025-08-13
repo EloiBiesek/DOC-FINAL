@@ -1,0 +1,22 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/assistencia/documento/upload-arquivos",
+  "parameters": {
+    "headers": {
+      "authorization": { "type": "string", "description": "Bearer <JWT>", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "multipart/form-data" }
+    },
+    "formData": {
+      "idassistencia": { "type": "integer", "required": true },
+      "arquivo": { "type": "file", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/cliente/assistencia/documento/upload-arquivos \\\n+--header 'authorization: Bearer SEU_TOKEN' \\\n+--form 'idassistencia=123' \\\n+--form 'arquivo=@documento.pdf'"
+  },
+  "responses": { "200": { "description": "Documento enviado" }, "400": { "description": "Erro no upload de documento" } }
+}
+
+

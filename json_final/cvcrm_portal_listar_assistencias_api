@@ -1,0 +1,25 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/assistencias",
+  "parameters": {
+    "headers": {
+      "authorization": { "type": "string", "description": "Bearer <JWT>", "required": true }
+    },
+    "query": {
+      "offset": { "type": "integer", "description": "Registro inicial (paginação)" },
+      "limit": { "type": "integer", "description": "Quantidade de registros a retornar" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url 'https://integracao.cvcrm.com.br/api/v1/cliente/assistencias?limit=50&offset=0' \\\n+--header 'accept: application/json' \\\n+--header 'authorization: Bearer SEU_TOKEN'"
+  },
+  "responses": {
+    "200": {
+      "description": "Assistências técnicas do cliente",
+      "body": { "type": "array", "items": { "type": "object" } }
+    }
+  }
+}
+
+

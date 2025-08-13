@@ -1,0 +1,25 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/assistencia",
+  "parameters": {
+    "headers": {
+      "authorization": { "type": "string", "description": "Bearer <JWT>", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "unidade": { "type": "integer", "description": "ID da unidade" },
+      "area": { "type": "integer" },
+      "localidade": { "type": "integer" },
+      "descricao": { "type": "string" },
+      "itens": { "type": "array", "items": { "type": "object" }, "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/cliente/assistencia \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'authorization: Bearer SEU_TOKEN' \\\n+--data '{\\n  "unidade": 999,\\n  "descricao": "Problema na janela",\\n  "itens": [{}, {}]\\n}'"
+  },
+  "responses": { "200": { "description": "Assistência cadastrada" }, "400": { "description": "Erro ao cadastrar assistência" } }
+}
+
+

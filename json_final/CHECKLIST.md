@@ -5,6 +5,18 @@
   - [x] cvcrm_portal_auth_externa_validar_api
   - [x] cvcrm_portal_listar_agendamentos_api
   - [x] cvcrm_portal_cadastrar_agendamento_api
+
+- [x] Portal do Cliente - Assistências Técnicas
+  - [x] cvcrm_portal_listar_assistencias_api
+  - [x] cvcrm_portal_listar_assistencia_situacoes_api
+  - [x] cvcrm_portal_retornar_assistencia_api
+  - [x] cvcrm_portal_cadastrar_assistencia_api
+  - [x] cvcrm_portal_assistencia_upload_arquivos_mensagem_api
+  - [x] cvcrm_portal_assistencia_upload_documentos_api
+  - [x] cvcrm_portal_assistencia_cadastrar_mensagem_api
+  - [x] cvcrm_portal_assistencia_listar_area_comum_api
+  - [x] cvcrm_portal_assistencia_datas_disponiveis_item_api
+  - [x] cvcrm_portal_assistencia_horarios_disponiveis_equipe_api
 - [x] Financeiro
   - [x] cvcrm_listar_pagamentos_parcela_reserva_api
   - [x] cvcrm_alterar_pagamento_parcela_reserva_api
