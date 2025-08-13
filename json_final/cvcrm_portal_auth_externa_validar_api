@@ -1,0 +1,18 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/validar-autenticacao",
+  "parameters": {
+    "headers": {
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": { "documento": { "type": "string", "required": true }, "codigo": { "type": "string", "required": true } }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/cliente/validar-autenticacao \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--data '{\\n  "documento": "02604550298",\\n  "codigo": "123456"\\n}'"
+  },
+  "responses": { "200": { "description": "Token de acesso gerado" }, "400": { "description": "Código inválido ou expirado" } }
+}
+
+

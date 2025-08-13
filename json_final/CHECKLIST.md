@@ -1,3 +1,10 @@
+- [x] Portal do Cliente - Autenticação e Agendamentos
+  - [x] cvcrm_portal_login_api
+  - [x] cvcrm_portal_login_sindico_api
+  - [x] cvcrm_portal_auth_externa_enviar_codigo_api
+  - [x] cvcrm_portal_auth_externa_validar_api
+  - [x] cvcrm_portal_listar_agendamentos_api
+  - [x] cvcrm_portal_cadastrar_agendamento_api
 - [x] Financeiro
   - [x] cvcrm_listar_pagamentos_parcela_reserva_api
   - [x] cvcrm_alterar_pagamento_parcela_reserva_api
