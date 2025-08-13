@@ -1,0 +1,10 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/retornar-multiplos-portais",
+  "parameters": { "headers": { "accept": { "type": "string", "description": "application/json" } } },
+  "examples": { "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cliente/retornar-multiplos-portais \\\n+--header 'accept: application/json'" },
+  "responses": { "200": { "description": "Domínios dos portais", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

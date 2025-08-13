@@ -1,0 +1,10 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/validar-slug/{slug}",
+  "parameters": { "headers": { "accept": { "type": "string", "description": "application/json" } }, "path": { "slug": { "type": "string", "required": true } } },
+  "examples": { "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cliente/validar-slug/meu-portal \\\n+--header 'accept: application/json'" },
+  "responses": { "200": { "description": "Resultado da validação", "body": { "type": "object", "properties": { "valido": { "type": "boolean" } } } } }
+}
+
+

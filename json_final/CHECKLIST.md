@@ -1,3 +1,10 @@
+- [x] Portal do Cliente - Configurações e Conteúdos
+  - [x] cvcrm_portal_configuracoes_api
+  - [x] cvcrm_portal_retornar_multiplos_portais_api
+  - [x] cvcrm_portal_validar_slug_api
+  - [x] cvcrm_portal_listar_banners_api
+  - [x] cvcrm_portal_listar_campos_adicionais_api
+  - [x] cvcrm_portal_listar_comunicados_api
 - [x] Portal do Cliente - Financeiro
   - [x] cvcrm_portal_financeiro_listar_boletos_segunda_via_api
   - [x] cvcrm_portal_financeiro_gerar_boleto_api
