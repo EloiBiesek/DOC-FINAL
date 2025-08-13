@@ -1,0 +1,147 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/relacionamento/atendimentos/listar",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "query": {
+      "documento": { "type": "string", "description": "Documento (CPF/CNPJ) do cliente" },
+      "email": { "type": "string", "description": "Email do cliente" },
+      "telefone": { "type": "string", "description": "Telefone do cliente" },
+      "idatendimento": { "type": "integer", "description": "ID do atendimento" },
+      "offset": { "type": "integer", "description": "Registro inicial (paginação)" },
+      "limit": { "type": "integer", "description": "Quantidade de registros a retornar (se ausente, retorna todos)" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/atendimentos/listar \\\n+--header 'accept: application/json'",
+    "curl_with_query": "curl --request GET \\\n+--url 'https://integracao.cvcrm.com.br/api/v1/relacionamento/atendimentos/listar?documento=02604550298&limit=50&offset=0' \\\n+--header 'accept: application/json'"
+  },
+  "responses": {
+    "200": {
+      "description": "Listagem do atendimentos",
+      "body": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "idatendimento": { "type": "integer" },
+            "nome": { "type": "string" },
+            "telefone": { "type": "string" },
+            "email": { "type": "string" },
+            "documento": { "type": "string" },
+            "titulo": { "type": "string" },
+            "assunto": { "type": "string" },
+            "sla_assunto": { "type": "string" },
+            "data_vencimento_assunto": { "type": "string" },
+            "subassunto": { "type": "string" },
+            "sla_subassunto": { "type": "integer" },
+            "data_vencimento_subassunto": { "type": "string" },
+            "descricao": { "type": "string" },
+            "nota_atendimento": { "type": "integer" },
+            "imobiliaria": { "type": "string" },
+            "corretor": { "type": "string" },
+            "data_cad": { "type": "string" },
+            "tempo_resposta": { "type": "integer", "description": "Tempo médio de resposta (em minutos)" },
+            "tempo_finalizado": { "type": "integer", "description": "Tempo até finalizar o chamado (em minutos)" },
+            "ultima_interacao": { "type": "string" },
+            "prioridade": { "type": "string", "description": "A, N ou B (Alta, Normal, Baixa)" },
+            "classificacao": { "type": "string" },
+            "idresponsavel": { "type": "integer" },
+            "responsavel": { "type": "string" },
+            "idsituacao": { "type": "integer" },
+            "situacao": { "type": "string" },
+            "sla_workflow": { "type": "integer" },
+            "data_vencimento_workflow": { "type": "string" },
+            "idunidade": { "type": "array", "items": { "type": "integer" } },
+            "tipo": { "type": "string" },
+            "humor_cliente": { "type": "object", "description": "Objeto com dados do humor do cliente" },
+            "bloco": { "type": "object", "description": "Objeto com dados do bloco" },
+            "empreendimento": { "type": "object", "description": "Objeto com dados do empreendimento" },
+            "campos_adicionais": {
+              "type": "array",
+              "description": "Array com os campos adicionais",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "idcampo": { "type": "string", "required": true },
+                  "nome": { "type": "string", "required": true },
+                  "valor": { "type": "string", "required": true, "description": "O tipo permitido para o campo 'valor' pode variar" }
+                }
+              }
+            },
+            "arquivos": {
+              "type": "array",
+              "description": "Array com os arquivos do atendimento",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "idarquivo": { "type": "integer" },
+                  "data_cad": { "type": "string" },
+                  "nome": { "type": "string" },
+                  "servidor": { "type": "string" },
+                  "tipo": { "type": "string" },
+                  "tamanho": { "type": "integer" },
+                  "url": { "type": "string" }
+                }
+              }
+            },
+            "respostas": {
+              "type": "array",
+              "description": "Array com as respostas do atendimento",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "idresposta": { "type": "integer" },
+                  "data_criacao": { "type": "string" },
+                  "resposta": { "type": "string" },
+                  "atendente": { "type": "string" },
+                  "imobiliaria": { "type": "string" },
+                  "corretor": { "type": "string" },
+                  "cliente": { "type": "string" },
+                  "arquivos": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "idarquivo": { "type": "integer" },
+                        "data_cad": { "type": "string" },
+                        "nome": { "type": "string" },
+                        "servidor": { "type": "string" },
+                        "tipo": { "type": "string" },
+                        "tamanho": { "type": "integer" },
+                        "url": { "type": "string" }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "tags": {
+              "type": "array",
+              "description": "Array com as tags associadas ao atendimento",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "idtag": { "type": "string" },
+                  "data_cad": { "type": "string" },
+                  "nome": { "type": "string" },
+                  "codigo": { "type": "integer" }
+                }
+              }
+            },
+            "codigo": { "type": "integer" }
+          }
+        }
+      }
+    },
+    "404": {
+      "description": "Erro ao alterar listar atendimentos"
+    }
+  }
+}
+
+

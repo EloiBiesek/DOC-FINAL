@@ -1,0 +1,38 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/relacionamento/atendimentos/alterar-situacao",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "idatendimento": { "type": "integer", "description": "ID do atendimento", "required": true },
+      "situacao_para": { "type": "string", "description": "Informar por nome da situação", "required": true }
+    }
+  },
+  "examples": {
+    "payload": {
+      "idatendimento": 12345,
+      "situacao_para": "Encerrado"
+    },
+    "curl": "curl --request PUT \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/atendimentos/alterar-situacao \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: usuario@email.com' \\\n+--header 'token: SEU_TOKEN'",
+    "curl_with_body": "curl --request PUT \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/atendimentos/alterar-situacao \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: usuario@email.com' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\"idatendimento\":12345,\"situacao_para\":\"Encerrado\"}'"
+  },
+  "responses": {
+    "200": {
+      "description": "Situação alterada",
+      "body": {
+        "codigo": { "type": "integer", "description": "Código de resposta" },
+        "mensagem": { "type": "string", "description": "Mensagem de sucesso" }
+      }
+    },
+    "404": {
+      "description": "Erro ao alterar situação"
+    }
+  }
+}
+

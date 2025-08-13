@@ -1,0 +1,269 @@
+{
+  "source": {
+    "doc_url": "https://desenvolvedor.cvcrm.com.br/reference/",
+    "fetched_from": "https://desenvolvedor.cvcrm.com.br/reference/",
+    "note": "Conteúdo extraído e estruturado do índice de referência de APIs (lista de APIs e operações). Alguns endpoints têm Base URL indicado como https://integracao.cvcrm.com.br; exemplos de request/response não estavam disponíveis no HTML simplificado e ficaram como placeholders."
+  },
+  "base_urls": [
+    "https://integracao.cvcrm.com.br",
+    "https://{dominiodocliente}.cvcrm.com.br"
+  ],
+  "sections": [
+    {
+      "name": "Atendimento API",
+      "description": "Operações relacionadas a atendimentos e suas interações.",
+      "operations": [
+        { "name": "Atendimento - Cadastrar Atendimento", "method": "POST", "path": "/api/v1/cv/atendimento/cadastrar", "description": "Cadastrar um novo atendimento." },
+        { "name": "Atendimento - Alterar situação do atendimento", "method": "PUT", "path": "/api/v1/relacionamento/atendimentos/alterar-situacao", "description": "Alterar situação do atendimento." },
+        { "name": "Atendimento - Lista os atendimentos", "method": "GET", "path": "/api/v1/relacionamento/atendimentos/listar", "description": "Listar atendimentos." },
+        { "name": "Atendimento - Adiciona uma mensagem no atendimento", "method": "POST", "path": "/api/v1/relacionamento/atendimentos/mensagem-atendimento", "description": "Adicionar mensagem ao atendimento." },
+        { "name": "Atendimento - Altera os dados do atendimento", "method": "PUT", "path": "/api/v1/relacionamento/atendimentos/atendimento/{idAtendimento}", "description": "Atualizar dados do atendimento." },
+        { "name": "Tarefas - Retorna as tarefas criadas do atendimento", "method": "GET", "path": "/api/v1/relacionamento/atendimentos/tarefas", "description": "Listar tarefas associadas a um atendimento." },
+        { "name": "Tarefas - Retorna uma tarefa criada", "method": "GET", "path": "/api/v1/relacionamento/atendimentos/tarefas/{idTarefaCriada}", "description": "Obter dados de uma tarefa criada." },
+        { "name": "Tarefas - Encerra uma tarefa criada", "method": "POST", "path": "/api/v1/relacionamento/atendimentos/tarefas/{idTarefaCriada}/encerrar", "description": "Encerrar/fechar uma tarefa criada." }
+      ]
+    },
+    {
+      "name": "Assistência Técnica API",
+      "description": "Operações para cadastro e gestão de assistências técnicas, visitas, equipes, itens, mensagens e uploads.",
+        "operations": [
+        { "name": "Assistência - Cadastrar nova assistência técnica", "method": "POST", "path": "/api/v1/relacionamento/assistencias", "description": "Cadastrar assistência técnica." },
+        { "name": "Assistência - Cadastrar assistência técnica para síndico", "method": "POST", "path": "/api/v1/cliente/assistencia", "description": "Cadastrar assistência para síndico." },
+        { "name": "Assistência - Retorna assistências técnicas ativas", "method": "GET", "path": "/api/v1/relacionamento/assistencias", "description": "Listar assistências ativas." },
+        { "name": "Assistência - Retorna dados de uma assistência técnica", "method": "GET", "path": "/api/v1/relacionamento/assistencias/{idAssistencia}", "description": "Obter detalhes de assistência." },
+        { "name": "Assistência - Altera dados da assistência técnica", "method": "PUT", "path": "/api/v1/relacionamento/assistencias/{idAssistencia}", "description": "Atualizar assistência." },
+        { "name": "Assistência - Altera situação da assistência (workflow)", "method": "POST", "path": "/api/v1/relacionamento/assistencias/{idAssistencia}/alterar-situacao/{idSituacao}", "description": "Mudar situação seguindo workflow." },
+        { "name": "Visitas - Alterar situação da visita (workflow)", "method": "POST", "path": "/api/v1/relacionamento/assistencias/visitas/{idVisita}/alterar-situacao/{idSituacao}", "description": "Alterar situação de visita." },
+        { "name": "Visitas - Cadastrar nova visita", "method": "POST", "path": "/api/v1/cliente/assistencia/{idAssistencia}/cadastrar-visita", "description": "Cadastrar visita em assistência." },
+        { "name": "Visitas - Altera dados da visita", "method": "PUT", "path": "/api/v1/relacionamento/assistencias/{idAssistencia}/visitas/{idVisita}", "description": "Atualizar dados de visita." },
+        { "name": "Equipes - Retorna equipes de assistências técnicas", "method": "GET", "path": "/api/v1/relacionamento/assistencias/equipes", "description": "Listar equipes." },
+        { "name": "Equipes - Retorna usuários de uma equipe", "method": "GET", "path": "/api/v1/relacionamento/assistencias/equipes/{idEquipe}/usuarios", "description": "Listar usuários da equipe." },
+        { "name": "Itens - Cadastra item na assistência técnica", "method": "POST", "path": "/api/v1/relacionamento/assistencias/itens", "description": "Adicionar item." },
+        { "name": "Itens - Altera situação de item (workflow)", "method": "POST", "path": "/api/v1/relacionamento/assistencias/itens/{idItemAssistencia}/alterar-situacao/{idSituacao}", "description": "Alterar situação do item." },
+        { "name": "Itens - Modifica dados do item", "method": "PUT", "path": "/api/v1/relacionamento/assistencias/{idAssistencia}/itens/{idAssistenciaItem}", "description": "Alterar dados do item." },
+        { "name": "Itens - Remove item da assistência técnica", "method": "DELETE", "path": "/api/v1/relacionamento/assistencias/{idAssistencia}/itens/{idAssistenciaItem}", "description": "Remover item." },
+        { "name": "Localidade - Retorna localidades", "method": "GET", "path": "/api/v1/relacionamento/assistencias/localidade", "description": "Listar localidades das assistências." },
+        { "name": "Área Comum - Retorna áreas comuns", "method": "GET", "path": "/api/v1/relacionamento/assistencias/area-comum", "description": "Listar áreas comuns." },
+        { "name": "Itens de Manutenção - Retorna itens", "method": "GET", "path": "/api/v1/relacionamento/assistencias/itens-manutencao", "description": "Listar itens de manutenção." },
+        { "name": "Itens de Manutenção - Cadastra item de manutenção", "method": "POST", "path": "/api/v1/relacionamento/assistencias/itens-manutencao", "description": "Cadastrar item de manutenção." },
+        { "name": "Mensagens - Cadastra mensagem na assistência técnica", "method": "POST", "path": "/api/v1/cliente/assistencia/{idAssistencia}/mensagem", "description": "Enviar mensagem à assistência." },
+        { "name": "Upload de arquivos - Faz upload de arquivos na assistência", "method": "POST", "path": "/api/v1/cliente/assistencia/upload-arquivos", "description": "Upload de arquivos." },
+        { "name": "Patologias - Retorna patologias", "method": "GET", "path": "/api/v1/relacionamento/patologias", "description": "Listar patologias." },
+        { "name": "Patologias - Cadastra nova patologia", "method": "POST", "path": "/api/v1/relacionamento/patologias", "description": "Cadastrar patologia." },
+        { "name": "Patologias - Retorna patologia", "method": "GET", "path": "/api/v1/relacionamento/patologias/{idPatologia}", "description": "Obter patologia por id." },
+        { "name": "Patologias - Atualiza patologia", "method": "PUT", "path": "/api/v1/relacionamento/patologias/{idPatologia}", "description": "Atualizar patologia." },
+        { "name": "Patologias - Remove patologia", "method": "DELETE", "path": "/api/v1/relacionamento/patologias/{idPatologia}", "description": "Remover patologia." }
+      ]
+    },
+    {
+      "name": "Cadastro gerais do ambiente do CV",
+      "description": "APIs de dados gerais do ambiente (tipos, correspondentes, kits, etc.).",
+        "operations": [
+        { "name": "Tipos de Associações - Retorna", "method": "GET", "path": "/api/v1/cadastros/tipos-associacoes", "description": "Retorna tipos de associações." },
+        { "name": "Tipos de Arquivos - Retorna", "method": "GET", "path": "/api/v1/configuracoes/tipos-arquivos", "description": "Retorna tipos de arquivos." },
+        { "name": "Correspondentes - Retorna usuários correspondentes", "method": "GET", "path": "/api/v2/cadastros/correspondentes-usuarios", "description": "Listar correspondentes." },
+        { "name": "Correspondentes - Cadastra usuário correspondente", "method": "POST", "path": "/api/v2/cadastros/correspondentes-usuarios", "description": "Criar correspondente." },
+        { "name": "Correspondentes - Retorna empresas correspondentes", "method": "GET", "path": "/api/v2/cadastros/correspondentes-empresas", "description": "Listar empresas correspondentes." },
+        { "name": "Correspondentes - Cadastra empresa correspondente", "method": "POST", "path": "/api/v2/cadastros/correspondentes-empresas", "description": "Criar empresa correspondente." },
+        { "name": "Kit Decoração - Retorna kits", "method": "GET", "path": "/api/v2/cadastros/kit-decoracao", "description": "Listar kits de decoração." }
+      ]
+    },
+    {
+      "name": "API de Clientes",
+      "description": "Operações para gerir clientes.",
+      "operations": [
+        { "name": "Cliente - Cadastra cliente", "method": "POST", "path": null, "description": "Cadastrar cliente." },
+        { "name": "Cliente - Retorna clientes", "method": "GET", "path": null, "description": "Listar clientes." },
+        { "name": "Cliente - Atualiza Sinalizador Jurídico", "method": "PUT", "path": null, "description": "Ativar/desativar sinalizador jurídico de pessoa." }
+      ]
+    },
+    {
+      "name": "API de Comissões",
+      "description": "Gerenciamento de comissões e pagamentos.",
+      "operations": [
+        { "name": "Comissão - Recupera lista de comissões", "method": "GET", "path": null, "description": "Listar comissões." },
+        { "name": "Comissão - Altera situação da comissão", "method": "POST", "path": null, "description": "Alterar situação." },
+        { "name": "Comissão - Cadastrar nova comissão", "method": "POST", "path": null, "description": "Criar comissão." },
+        { "name": "Pagamentos da comissão - Retorna pagamentos", "method": "GET", "path": null, "description": "Listar pagamentos." },
+        { "name": "Pagamentos da comissão - Alterar pagamento", "method": "PUT", "path": null, "description": "Atualizar pagamento." },
+        { "name": "Pagamentos da comissão - Liberar pagamentos", "method": "PUT", "path": null, "description": "Liberar pagamentos." },
+        { "name": "Pagamentos da comissão - Bloquear pagamentos", "method": "PUT", "path": null, "description": "Bloquear pagamentos." }
+      ]
+    },
+    {
+      "name": "APIS - Comunicações",
+      "description": "Várias operações relacionadas a comunicações (atendimentos, contratos, financeiro, leads, pessoa, unidades, agendamentos).",
+      "operations": [
+        { "name": "Assuntos - Retorna assuntos", "method": "GET", "path": null, "description": "Listar assuntos e subassuntos." },
+        { "name": "Atendimentos - Realiza cadastro de novo atendimento", "method": "POST", "path": null, "description": "Cadastrar atendimento (comunicações)." },
+        { "name": "Atendimentos - Finaliza um atendimento", "method": "POST", "path": null, "description": "Finalizar atendimento." },
+        { "name": "Contratos - Solicitar envio por e-mail", "method": "POST", "path": null, "description": "Solicitação de envio dos contratos por email." },
+        { "name": "Empreendimentos - Retorna dados de empreendimentos ativos", "method": "GET", "path": null, "description": "Listar empreendimentos." },
+        { "name": "Unidades - Retorna dados da unidade", "method": "GET", "path": null, "description": "Obter dados de unidade." },
+        { "name": "Agendamentos - Várias operações (listar, cadastrar, horários disponíveis, cancelar)", "method": "GET/POST/PUT", "path": null, "description": "Gerenciamento de agendamentos." },
+        { "name": "Leads - Realiza cadastro de novo lead", "method": "POST", "path": null, "description": "Criar lead." },
+        { "name": "Leads - Altera empreendimento vinculado ao lead", "method": "PUT", "path": null, "description": "Atualizar empreendimento do lead." },
+        { "name": "Pessoa - Retorna dados da pessoa", "method": "GET", "path": null, "description": "Obter dados da pessoa." }
+      ]
+    },
+    {
+      "name": "API de Corretores",
+      "description": "Criar e recuperar corretores.",
+      "operations": [
+        { "name": "Corretor - Cadastrar corretor (PF)", "method": "POST", "path": null, "description": "Cadastrar corretor pessoa física." },
+        { "name": "Corretor - Retornar corretores", "method": "GET", "path": null, "description": "Listar corretores." },
+        { "name": "Corretor - Cadastrar corretor PJ", "method": "POST", "path": null, "description": "Cadastrar corretor pessoa jurídica." }
+      ]
+    },
+    {
+      "name": "CVDW",
+      "description": "APIs internas do Construtor de Vendas (comissões, reservas, vendas, simulações, etc.).",
+      "operations": [
+        { "name": "Comissões - Retorna comissões", "method": "GET", "path": null, "description": "Listar comissões CVDW." },
+        { "name": "Reservas - Retorna reservas", "method": "GET", "path": null, "description": "Listar reservas." },
+        { "name": "Simulações - Retorna dados de simulações", "method": "GET", "path": null, "description": "Obter simulações." },
+        { "name": "Vendas - Retorna dados de vendas", "method": "GET", "path": null, "description": "Obter vendas." },
+        { "name": "Unidades - Retorna situação das unidades", "method": "GET", "path": null, "description": "Obter dados das unidades." }
+      ]
+    },
+    {
+      "name": "API de Pré-cadastro",
+      "description": "Operações de pré-cadastro e documentos.",
+      "operations": [
+        { "name": "Pré-cadastro - Retorna pré-cadastros", "method": "GET", "path": null, "description": "Listar pré-cadastros." },
+        { "name": "Pré-cadastro - Cadastrar pré-cadastro", "method": "POST", "path": null, "description": "Criar pré-cadastro." },
+        { "name": "Pré-cadastro - Editar pré-cadastro", "method": "PUT", "path": null, "description": "Editar pré-cadastro." },
+        { "name": "Documentos - Retorna documentos do pré-cadastro", "method": "GET", "path": null, "description": "Listar documentos." },
+        { "name": "Documentos - Cadastra documentos no pré-cadastro", "method": "POST", "path": null, "description": "Upload/anexar documento." }
+      ]
+    },
+    {
+      "name": "Profissões",
+      "description": "Listagem e cadastro de profissões.",
+      "operations": [
+        { "name": "Profissões - GET /profissoes", "method": "GET", "path": "/profissoes", "description": "Retorna profissões." },
+        { "name": "Profissões - POST cadastrar profissão", "method": "POST", "path": null, "description": "Cadastrar nova profissão." }
+      ]
+    },
+    {
+      "name": "Notificações",
+      "description": "Repasse e gerenciamento de notificações.",
+      "operations": [
+        { "name": "Repasse - Retorna repasses", "method": "GET", "path": null, "description": "Listar repasses." },
+        { "name": "Repasse - Altera situação de um repasse", "method": "POST", "path": null, "description": "Alterar situação." },
+        { "name": "Repasse - Cadastra nova mensagem", "method": "POST", "path": null, "description": "Criar mensagem." }
+      ]
+    },
+    {
+      "name": "API de Reservas",
+      "description": "Ops para criar, alterar, listar reservas e conteúdo relacionado (contratos, boletos, mensagens, distratos, etc.).",
+      "operations": [
+        { "name": "Reserva - Retorna reservas de acordo com filtros", "method": "GET", "path": null, "description": "Buscar reservas." },
+        { "name": "Reserva - Retorna reserva por filtros", "method": "GET", "path": null, "description": "Obter reserva específica." },
+        { "name": "Reserva - Retorna regras de comissão", "method": "GET", "path": null, "description": "Obter regras de comissão." },
+        { "name": "Reserva - Atualiza reserva", "method": "PUT", "path": null, "description": "Atualizar reserva." },
+        { "name": "Reserva - Cadastra reserva", "method": "POST", "path": null, "description": "Criar reserva." },
+        { "name": "Alterar Situação - Altera situação da reserva", "method": "POST", "path": null, "description": "Alterar situação." },
+        { "name": "Informar Venda - Atualiza situação para vendida", "method": "POST", "path": null, "description": "Marcar como vendida." },
+        { "name": "Distrato - Retorna distratos", "method": "GET", "path": null, "description": "Listar distratos." },
+        { "name": "Distrato - Altera situação para distrato", "method": "POST", "path": null, "description": "Solicitar distrato." },
+        { "name": "Cessão - Retorna cessões", "method": "GET", "path": null, "description": "Listar cessões." },
+        { "name": "Cessão - Realiza cessão de direitos", "method": "POST", "path": null, "description": "Efetivar cessão." },
+        { "name": "Contratos - Retornar/ cadastrar/ enviar para assinatura", "method": "GET/POST", "path": null, "description": "Gerenciar contratos da reserva." },
+        { "name": "Boletos - Cadastrar/Atualizar boletos da parcela", "method": "POST/PUT", "path": null, "description": "Gerenciar boletos." },
+        { "name": "Lotes - Listar/ Cadastrar/ Alterar lote de pagamentos de comissão", "method": "GET/POST/PUT", "path": null, "description": "Gerenciar lotes." },
+        { "name": "Documentos - Retorna / Cadastra documentos", "method": "GET/POST", "path": null, "description": "Gerenciar documentos de reserva." },
+        { "name": "Dados ERP - Retorna/Atualiza dados do ERP Sienge", "method": "GET/PUT", "path": null, "description": "Integração com ERP Sienge." },
+        { "name": "Mensagens - Cadastrar / Retornar mensagens", "method": "POST/GET", "path": null, "description": "Mensagens relacionadas à reserva." },
+        { "name": "Análises de Crédito - Retorna análises", "method": "GET", "path": null, "description": "Listar análises de crédito." }
+      ]
+    },
+    {
+      "name": "API de Séries de Tabelas de Preços",
+      "description": "Ops para tabelas de preço e séries.",
+      "operations": [
+        { "name": "Tabelas de Preços - Retorna tabelas", "method": "GET", "path": null, "description": "Listar tabelas de preço." },
+        { "name": "Séries de Tabelas - Cadastro de séries", "method": "POST", "path": null, "description": "Criar série de tabela de preço." }
+      ]
+    },
+    {
+      "name": "Usuários Administrativos",
+      "description": "Endpoints para autenticação, usuários administrativos e gerenciamento de senhas.",
+      "operations": [
+        { "name": "Usuários Administrativos - GET /v1/cv/usuariosAdministrativos", "method": "GET", "path": "/v1/cv/usuariosAdministrativos", "description": "Listar usuários administrativos." },
+        { "name": "Usuários Administrativos - GET perfil", "method": "GET", "path": "/v1/cv/usuariosAdministrativos/perfil", "description": "Obter perfil do usuário administrativo." },
+        { "name": "Autenticação - Envia código de verificação para autenticação externa", "method": "POST", "path": null, "description": "Enviar código." },
+        { "name": "Autenticação - Gera token de autenticação externa", "method": "POST", "path": null, "description": "Gerar token." },
+        { "name": "Esqueci Senha - Enviar código de recuperação", "method": "POST", "path": null, "description": "Solicitar código de recuperação." },
+        { "name": "Esqueci Senha - Validar código de recuperação", "method": "POST", "path": null, "description": "Validar código." },
+        { "name": "Esqueci Senha - Alterar senha do usuário", "method": "POST", "path": null, "description": "Alterar senha." },
+        { "name": "Senha Expirada - Alterar senha expirada", "method": "POST", "path": null, "description": "Alterar senha expirada." }
+      ]
+    },
+    {
+      "name": "Workflow API",
+      "description": "Endpoints de workflow para funcionalidades e histórico.",
+      "operations": [
+        { "name": "Workflow - GET /workflow/{funcionalidade}", "method": "GET", "path": "/workflow/{funcionalidade}", "description": "Retorna informações de workflow por funcionalidade." },
+        { "name": "Workflow - GET /workflow/{funcionalidade}/{idSituacao}", "method": "GET", "path": "/workflow/{funcionalidade}/{idSituacao}", "description": "Retorna workflow filtrado por situação." }
+      ]
+    },
+    {
+      "name": "Geral API",
+      "description": "Autenticação geral e endpoints utilitários.",
+      "operations": [
+        { "name": "Autenticação - Gera token de acesso", "method": "POST", "path": null, "description": "Gera token de acesso para usuário." }
+      ]
+    },
+    {
+      "name": "Serviços Internos do Construtor de Vendas",
+      "description": "Endpoints internos de workflow e histórico do Construtor de Vendas.",
+      "operations": [
+        { "name": "Workflow - GET /workflow", "method": "GET", "path": "/workflow", "description": "Listar workflows internos." },
+        { "name": "Workflow Histórico - GET /workflow/{funcionalidade}/historico", "method": "GET", "path": "/workflow/{funcionalidade}/historico", "description": "Obter histórico de workflow." },
+        { "name": "Workflow Histórico detalhe - GET /workflow/{funcionalidade}/historico/{idhistorico}", "method": "GET", "path": "/workflow/{funcionalidade}/historico/{idhistorico}", "description": "Detalhe de histórico." }
+      ]
+    },
+    {
+      "name": "Localidades API",
+      "description": "Retornar estados e cidades.",
+      "operations": [
+        { "name": "Localidades - Retorna estados", "method": "GET", "path": null, "description": "Listar estados." },
+        { "name": "Localidades - Retorna cidades", "method": "GET", "path": null, "description": "Listar cidades." }
+      ]
+    },
+    {
+      "name": "Gestões de Time",
+      "description": "Retornar gestão de time cadastrada.",
+      "operations": [
+        { "name": "Gestões de Time - Retorna gestão de time cadastrada", "method": "GET", "path": null, "description": "Obter gestão de time." }
+      ]
+    }
+  ],
+  "endpoints_with_examples": [
+    {
+      "name": "Cadastrar Atendimento (exemplo do índice)",
+      "method": "POST",
+      "path_template": "/api/v1/relacionamento/atendimentos/cadastrar",
+      "full_example_url": "https://integracao.cvcrm.com.br/api/v1/relacionamento/atendimentos/cadastrar",
+      "description": "Formato de cadastro para cliente no CV.",
+      "examples": {
+        "shell_curl": "",
+        "node_fetch": "",
+        "ruby_rest_client": "",
+        "php_curl": "",
+        "python_requests": ""
+      },
+      "notes": "O índice exibe linguagens de exemplo (Shell, Node, Ruby, PHP, Python) mas não expõe o corpo de request/response na versão simplificada capturada. Preencher exemplos com os parâmetros do payload exigidos exige leitura das referências detalhadas (ex.: páginas individuais de cada endpoint)."
+    }
+  ],
+  "links": [
+    { "text": "CV CRM - Portal do Desenvolvedor - Referências das APIs", "href": "https://desenvolvedor.cvcrm.com.br/reference/" },
+    { "text": "Base URL example for Cadastrar Atendimento", "href": "https://integracao.cvcrm.com.br/api/v1/relacionamento/atendimentos/cadastrar" }
+  ],
+  "notes_and_next_steps": {
+    "1": "Os endpoints foram extraídos do índice público; muitas operações aparecem no índice sem o path exato (apenas verbo). Para criar exemplos de request/response completos o agente precisará visitar cada página de endpoint individual no portal (ex: clicar em 'Cadastrar Atendimento' -> ver corpo, headers, exemplos).",
+    "2": "Se desejar, eu posso: (a) seguir e baixar cada página de endpoint individual para preencher parâmetros e exemplos, (b) gerar stubs de chamadas para um agente n8n com autenticação bearer, ou (c) exportar este JSON em arquivo `cvcrm_reference.json`."
+  }
+}
+

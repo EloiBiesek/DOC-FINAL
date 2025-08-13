@@ -1,0 +1,95 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/relacionamento/atendimentos/cadastrar",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "cliente_cv": {
+        "type": "object",
+        "description": "Usar este objeto caso você deseje criar um atendimento para um cliente do CV. É obrigatório informar um idpessoa do cliente ou um documento do cliente.",
+        "properties": {
+          "idpessoa": { "type": "integer", "description": "ID da pessoa" },
+          "documento": { "type": "integer", "description": "CPF ou CNPJ do cliente sem máscara" }
+        }
+      },
+      "cliente_avulso": {
+        "type": "object",
+        "description": "Usar este objeto caso você deseje criar um atendimento uma pessoa avulsa",
+        "properties": {
+          "nome_cliente": { "type": "string", "description": "Nome do cliente", "required": true },
+          "email_cliente": { "type": "string", "description": "Email do cliente" },
+          "documento_cliente": { "type": "string", "description": "CPF ou CNPJ do cliente sem máscara" }
+        }
+      },
+      "titulo": { "type": "string", "description": "Título do atendimento", "required": true },
+      "descricao": { "type": "string", "description": "Descrição do atendimento", "required": true },
+      "telefone_atendimento": { "type": "string", "description": "Telefone de contato para o atendimento" },
+      "idempreendimento": { "type": "integer", "description": "ID do empreendimento" },
+      "idunidade": { "type": "array", "description": "Array de IDs das unidades", "items": { "type": "integer" } },
+      "idassunto": { "type": "integer", "description": "ID do assunto", "required": true },
+      "idsubassunto": { "type": "integer", "description": "ID do subassunto", "required": true },
+      "idcanal": { "type": "integer", "description": "ID do canal" },
+      "idresponsavel": { "type": "integer", "description": "ID do responsável" },
+      "humor_cliente": { "type": "string", "description": "I, N ou S (Insatisfeito, Normal, Satisfeito)" },
+      "encerrado_primeiro_contato": { "type": "string", "description": "S ou N (Sim ou Não)" },
+      "cliente_visualiza": { "type": "string", "description": "S ou N (Sim ou Não)", "required": true },
+      "arquivos": {
+        "type": "array",
+        "description": "Array com arquivos para o atendimento em base64",
+        "items": { "type": "object" }
+      },
+      "campos_adicionais": {
+        "type": "array",
+        "description": "Array de campos adicionais",
+        "items": { "type": "object" }
+      }
+    }
+  },
+  "examples": {
+    "payload": {
+      "cliente_cv": {
+        "idpessoa": 12345
+      },
+      "titulo": "Solicitação de Informações",
+      "descricao": "Cliente solicitando informações sobre o empreendimento",
+      "telefone_atendimento": "(11) 99999-9999",
+      "idempreendimento": 1,
+      "idassunto": 1,
+      "idsubassunto": 1,
+      "cliente_visualiza": "S"
+    },
+    "payload_avulso": {
+      "cliente_avulso": {
+        "nome_cliente": "João Silva",
+        "email_cliente": "joao@email.com",
+        "documento_cliente": "12345678900"
+      },
+      "titulo": "Dúvida sobre produto",
+      "descricao": "Cliente interessado em conhecer mais sobre os produtos",
+      "idassunto": 1,
+      "idsubassunto": 1,
+      "cliente_visualiza": "S"
+    },
+    "curl": "curl --request POST \\\n--url https://integracao.cvcrm.com.br/api/v1/relacionamento/atendimentos/cadastrar \\\n--header 'accept: application/json' \\\n--header 'content-type: application/json' \\\n--header 'email: usuario@email.com' \\\n--header 'token: SEU_TOKEN'",
+    "curl_with_body": "curl --request POST \\\n--url https://integracao.cvcrm.com.br/api/v1/relacionamento/atendimentos/cadastrar \\\n--header 'accept: application/json' \\\n--header 'content-type: application/json' \\\n--header 'email: usuario@email.com' \\\n--header 'token: SEU_TOKEN' \\\n--data '{\"cliente_cv\":{\"idpessoa\":12345},\"titulo\":\"Solicitação de Informações\",\"descricao\":\"Cliente solicitando informações sobre o empreendimento\",\"idassunto\":1,\"idsubassunto\":1,\"cliente_visualiza\":\"S\"}'"
+  },
+  "responses": {
+    "200": {
+      "description": "Atendimento cadastrado",
+      "body": {
+        "id": { "type": "integer", "description": "ID do atendimento criado" },
+        "codigo": { "type": "integer", "description": "Código de resposta" },
+        "mensagem": { "type": "string", "description": "Mensagem de sucesso" }
+      }
+    },
+    "404": {
+      "description": "Erro ao cadastrar atendimento"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/relacionamento/atendimentos/atendimento/{idAtendimento}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "path": {
+      "idAtendimento": { "type": "integer", "description": "ID do atendimento", "required": true }
+    },
+    "body": {
+      "idassunto": { "type": "integer" },
+      "idsubassunto": { "type": "integer" },
+      "idempreendimento": { "type": "integer" },
+      "idunidade": { "type": "array", "description": "Ids das unidades (array ou inteiro)", "items": { "type": "integer" } },
+      "idresponsavel": { "type": "integer" },
+      "idtipo": { "type": "integer" },
+      "idclassificacao": { "type": "integer" },
+      "prioridade": { "type": "string", "description": "A, N ou B (Alta, Normal, Baixa)" },
+      "proxima_acao": { "type": "string" },
+      "cliente_visualiza": { "type": "boolean" },
+      "data_abertura": { "type": "string" },
+      "idcanal": { "type": "integer" },
+      "data_finalizacao": { "type": "string" },
+      "tags": { "type": "array", "description": "Os ids das tags.", "items": { "type": "integer" } },
+      "campos_adicionais": { "type": "array", "items": { "type": "object" } },
+      "arquivos": { "type": "array", "description": "Array com arquivos para o atendimento em base64", "items": { "type": "object" } }
+    }
+  },
+  "examples": {
+    "path": {
+      "idAtendimento": 12345
+    },
+    "payload": {
+      "prioridade": "N",
+      "cliente_visualiza": true,
+      "tags": [1, 2]
+    },
+    "curl": "curl --request PUT \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/atendimentos/atendimento/12345 \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json'"
+  },
+  "responses": {
+    "200": {
+      "description": "Operação realizada com sucesso",
+      "body": {
+        "sucesso": { "type": "boolean" }
+      }
+    },
+    "400": { "description": "Requisição invalida!" },
+    "404": { "description": "Não encontrado!" }
+  }
+}
+
+

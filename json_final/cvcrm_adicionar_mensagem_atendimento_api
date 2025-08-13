@@ -1,0 +1,46 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/relacionamento/atendimentos/mensagem-atendimento",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "idatendimento": { "type": "integer", "description": "ID do atendimento", "required": true },
+      "mensagem": { "type": "string", "description": "Mensagem a ser adicionada", "required": true },
+      "documento": { "type": "string", "description": "Documento do cliente (opcional)" },
+      "cliente_visualiza": { "type": "string", "description": "S ou N (Sim ou Não)" },
+      "arquivos": {
+        "type": "array",
+        "description": "Array com arquivos para o atendimento em base64",
+        "items": { "type": "object" }
+      }
+    }
+  },
+  "examples": {
+    "payload": {
+      "idatendimento": 12345,
+      "mensagem": "Atualização de status do atendimento.",
+      "cliente_visualiza": "S"
+    },
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/atendimentos/mensagem-atendimento \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json'",
+    "curl_with_body": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/atendimentos/mensagem-atendimento \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--data '{\"idatendimento\":12345,\"mensagem\":\"Atualização de status do atendimento.\",\"cliente_visualiza\":\"S\"}'"
+  },
+  "responses": {
+    "200": {
+      "description": "Mensagem cadastrada",
+      "body": {
+        "sucesso": { "type": "boolean" },
+        "codigo": { "type": "integer" },
+        "mensagem": { "type": "string" }
+      }
+    },
+    "400": {
+      "description": "Requisição invalida!"
+    }
+  }
+}
+
+
