@@ -1,0 +1,33 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/relacionamento/assistencias",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "query": {
+      "documento": { "type": "string", "description": "Documento (CPF/CNPJ) do cliente" },
+      "idpessoa": { "type": "integer", "description": "ID da pessoa no CV" },
+      "offset": { "type": "integer", "description": "Registro inicial (paginação)" },
+      "limit": { "type": "integer", "description": "Quantidade de registros a retornar (se ausente, retorna todos)" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/assistencias \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'",
+    "curl_with_query": "curl --request GET \\\n+--url 'https://integracao.cvcrm.com.br/api/v1/relacionamento/assistencias?documento=02604550298&limit=50&offset=0' \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": {
+      "description": "Listagem de assistências técnicas",
+      "body": {
+        "type": "array",
+        "items": { "type": "object" }
+      }
+    },
+    "404": { "description": "Erro ao listar assistências técnicas" }
+  }
+}
+
+

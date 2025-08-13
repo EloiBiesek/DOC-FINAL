@@ -1,0 +1,27 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/comissoes",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "query": {
+      "idcomissao_cv": { "type": "integer", "description": "ID da comissão no CV" },
+      "idcomissao_int": { "type": "string", "description": "ID da comissão no sistema integrado" },
+      "idreserva_cv": { "type": "integer", "description": "ID da reserva no CV" },
+      "idreserva_int": { "type": "string", "description": "ID da reserva no sistema integrado" },
+      "documento_pagador": { "type": "string", "description": "Documento do pagador" },
+      "a_partir_de": { "type": "string", "description": "Data inicial no formato YYYY-MM-DD" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url 'https://integracao.cvcrm.com.br/api/v1/cv/comissoes?idreserva_cv=123' \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "Lista de comissões", "body": { "type": "array", "items": { "type": "object" } } }
+  }
+}
+
+

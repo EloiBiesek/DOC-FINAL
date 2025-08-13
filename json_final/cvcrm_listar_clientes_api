@@ -1,0 +1,25 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/cvio/cliente",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "query": {
+      "documento": { "type": "string", "description": "CPF/CNPJ do cliente" },
+      "email": { "type": "string", "description": "Email do cliente" },
+      "telefone": { "type": "string", "description": "Telefone do cliente" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url 'https://integracao.cvcrm.com.br/api/cvio/cliente?documento=02604550298' \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "Dados do cliente", "body": { "type": "object" } },
+    "404": { "description": "Cliente não encontrado" }
+  }
+}
+
+

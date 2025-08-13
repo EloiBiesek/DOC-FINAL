@@ -1,0 +1,24 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/atendimento/finalizar/{idatendimento}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "path": { "idatendimento": { "type": "integer", "description": "ID do atendimento", "required": true } },
+    "body": { "avaliacao": { "type": "integer", "description": "Nota de avaliação (opcional)" } }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/cv/atendimento/finalizar/12345 \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "avaliacao": 5\\n}'"
+  },
+  "responses": {
+    "200": { "description": "Atendimento finalizado" },
+    "400": { "description": "Erro ao finalizar atendimento" }
+  }
+}
+
+

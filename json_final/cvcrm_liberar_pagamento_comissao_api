@@ -1,0 +1,25 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/pagamentos/comissao/liberar",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "idcomissao_cv": { "type": "integer", "description": "ID da comissão no CV", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request PUT \\\n+--url https://integracao.cvcrm.com.br/api/v1/cv/pagamentos/comissao/liberar \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "idcomissao_cv": 1001\\n}'"
+  },
+  "responses": {
+    "200": { "description": "Pagamentos da comissão liberados" },
+    "400": { "description": "Erro ao liberar pagamentos" }
+  }
+}
+
+

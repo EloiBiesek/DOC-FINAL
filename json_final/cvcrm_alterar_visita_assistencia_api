@@ -1,0 +1,31 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/relacionamento/assistencias/{idassistencia}/visitas/{idvisita}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "path": {
+      "idassistencia": { "type": "integer", "description": "ID da assistência", "required": true },
+      "idvisita": { "type": "integer", "description": "ID da visita", "required": true }
+    },
+    "body": {
+      "data": { "type": "string", "description": "Data da visita (YYYY-MM-DD)" },
+      "hora": { "type": "string", "description": "Hora da visita (HH:mm)" },
+      "observacao": { "type": "string", "description": "Observações da visita" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request PUT \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/assistencias/123/visitas/456 \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "data": "2025-02-01",\\n  "hora": "10:00",\\n  "observacao": "Reagendada"\\n}'"
+  },
+  "responses": {
+    "200": { "description": "Visita alterada" },
+    "400": { "description": "Erro ao alterar visita" }
+  }
+}
+
+

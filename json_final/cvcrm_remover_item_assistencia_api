@@ -1,0 +1,24 @@
+{
+  "method": "DELETE",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/relacionamento/assistencias/{idassistencia}/itens/{idassistenciaitem}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "path": {
+      "idassistencia": { "type": "integer", "description": "ID da assistência", "required": true },
+      "idassistenciaitem": { "type": "integer", "description": "ID do item da assistência", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request DELETE \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/assistencias/123/itens/456 \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "Item removido com sucesso" },
+    "404": { "description": "Item não encontrado" }
+  }
+}
+
+

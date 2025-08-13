@@ -1,0 +1,26 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/pagamentos/comissao",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "idcomissao_cv": { "type": "integer", "description": "ID da comissão no CV", "required": true },
+      "situacao": { "type": "string", "description": "Nome exato da situação do pagamento", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request PUT \\\n+--url https://integracao.cvcrm.com.br/api/v1/cv/pagamentos/comissao \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "idcomissao_cv": 1001,\\n  "situacao": "Liberado"\\n}'"
+  },
+  "responses": {
+    "200": { "description": "Pagamento da comissão alterado" },
+    "400": { "description": "Erro ao alterar pagamento da comissão" }
+  }
+}
+
+

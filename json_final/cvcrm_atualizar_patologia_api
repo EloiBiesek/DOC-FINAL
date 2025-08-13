@@ -1,0 +1,27 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/relacionamento/patologias/{idpatologia}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "path": { "idpatologia": { "type": "integer", "description": "ID da patologia", "required": true } },
+    "body": {
+      "nome": { "type": "string", "description": "Nome da patologia" },
+      "descricao": { "type": "string", "description": "Descrição da patologia" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request PUT \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/patologias/123 \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "nome": "Infiltração",\\n  "descricao": "Atualização"\\n}'"
+  },
+  "responses": {
+    "200": { "description": "Patologia atualizada" },
+    "400": { "description": "Erro ao atualizar patologia" }
+  }
+}
+
+

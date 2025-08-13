@@ -1,0 +1,26 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cvbot/contratos",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "idcliente": { "type": "integer", "description": "ID do cliente", "required": true },
+      "email_destino": { "type": "string", "description": "Email para envio" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/cvbot/contratos \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "idcliente": 321,\\n  "email_destino": "cliente@email.com"\\n}'"
+  },
+  "responses": {
+    "200": { "description": "Solicitação enviada" },
+    "400": { "description": "Erro na solicitação" }
+  }
+}
+
+

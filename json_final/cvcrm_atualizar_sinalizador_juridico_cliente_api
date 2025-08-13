@@ -1,0 +1,26 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/cvio/cliente/sinalizador_juridico",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "idcliente_legado": { "type": "string", "description": "Identificador do cliente no sistema legado", "required": true },
+      "ativo": { "type": "boolean", "description": "Define o sinalizador jurídico como ativo ou inativo", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request PUT \\\n+--url https://integracao.cvcrm.com.br/api/cvio/cliente/sinalizador_juridico \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "idcliente_legado": "ABC-123",\\n  "ativo": true\\n}'"
+  },
+  "responses": {
+    "200": { "description": "Sinalizador jurídico atualizado" },
+    "400": { "description": "Erro ao atualizar sinalizador jurídico" }
+  }
+}
+
+

@@ -1,0 +1,24 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/relacionamento/assistencias/{idassistencia}/alterar-situacao/{idsituacao}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "path": {
+      "idassistencia": { "type": "integer", "description": "ID da assistência", "required": true },
+      "idsituacao": { "type": "integer", "description": "ID da situação", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/assistencias/123/alterar-situacao/4 \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "Situação da assistência alterada" },
+    "400": { "description": "Erro ao alterar situação da assistência" }
+  }
+}
+
+

@@ -1,0 +1,47 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/relacionamento/assistencias",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "documento": { "type": "string", "description": "Documento (CPF/CNPJ) do cliente" },
+      "idpessoa": { "type": "integer", "description": "ID da pessoa no CV" },
+      "unidade": { "type": "integer", "description": "ID da unidade" },
+      "unidade_avulsa": { "type": "string", "description": "Descrição da unidade avulsa" },
+      "area": { "type": "integer", "description": "ID da área comum" },
+      "localidade": { "type": "integer", "description": "ID da localidade" },
+      "itens": {
+        "type": "array",
+        "description": "Itens da assistência",
+        "items": { "type": "object" }
+      },
+      "descricao": { "type": "string", "description": "Descrição da assistência" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/assistencias \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'",
+    "curl_with_body": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/assistencias \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "idpessoa": 123,\\n  "unidade": 456,\\n  "itens": [{}, {}],\\n  "descricao": "Descreva a assistência"\\n}'"
+  },
+  "responses": {
+    "200": {
+      "description": "Assistência técnica cadastrada",
+      "body": {
+        "type": "object",
+        "properties": {
+          "idassistencia": { "type": "integer" },
+          "codigo": { "type": "integer" },
+          "mensagem": { "type": "string" }
+        }
+      }
+    },
+    "400": { "description": "Erro ao cadastrar assistência técnica" }
+  }
+}
+
+

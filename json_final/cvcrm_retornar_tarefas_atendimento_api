@@ -1,0 +1,49 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/relacionamento/atendimentos/tarefas",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "query": {
+      "idatendimento": { "type": "integer", "description": "ID do atendimento para filtrar as tarefas" },
+      "offset": { "type": "integer", "description": "Registro inicial (paginação)" },
+      "limit": { "type": "integer", "description": "Quantidade de registros a retornar (se ausente, retorna todos)" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/atendimentos/tarefas \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'",
+    "curl_with_query": "curl --request GET \\\n+--url 'https://integracao.cvcrm.com.br/api/v1/relacionamento/atendimentos/tarefas?idatendimento=123&limit=50&offset=0' \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": {
+      "description": "Lista de tarefas do atendimento",
+      "body": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "idtarefa": { "type": "integer" },
+            "idatendimento": { "type": "integer" },
+            "titulo": { "type": "string" },
+            "descricao": { "type": "string" },
+            "situacao": { "type": "string" },
+            "idsituacao": { "type": "integer" },
+            "responsavel": { "type": "string" },
+            "idresponsavel": { "type": "integer" },
+            "data_criacao": { "type": "string" },
+            "data_prevista": { "type": "string" },
+            "data_conclusao": { "type": "string" }
+          }
+        }
+      }
+    },
+    "404": {
+      "description": "Erro ao listar tarefas do atendimento"
+    }
+  }
+}
+
+

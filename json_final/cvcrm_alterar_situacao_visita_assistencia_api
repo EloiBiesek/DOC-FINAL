@@ -1,0 +1,24 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/relacionamento/assistencias/visitas/{idvisita}/alterar-situacao/{idsituacao}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "path": {
+      "idvisita": { "type": "integer", "description": "ID da visita", "required": true },
+      "idsituacao": { "type": "integer", "description": "ID da situação", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/assistencias/visitas/456/alterar-situacao/3 \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "Situação da visita alterada" },
+    "400": { "description": "Erro ao alterar situação da visita" }
+  }
+}
+
+

@@ -1,0 +1,21 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cvbot/assuntos/{idassunto}/sub-assuntos",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "path": { "idassunto": { "type": "integer", "description": "ID do assunto", "required": true } }
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cvbot/assuntos/1/sub-assuntos \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "Lista de subassuntos", "body": { "type": "array", "items": { "type": "object" } } },
+    "404": { "description": "Assunto não encontrado" }
+  }
+}
+
+
