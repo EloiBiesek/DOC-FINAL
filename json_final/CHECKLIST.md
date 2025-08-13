@@ -1,0 +1,83 @@
+# Checklist de JSONs CV CRM
+
+- [x] Atendimento API
+  - [x] cvcrm_cadastrar_atendimento_api
+  - [x] cvcrm_alterar_situacao_atendimento_api
+  - [x] cvcrm_listar_atendimentos_api
+  - [x] cvcrm_adicionar_mensagem_atendimento_api
+  - [x] cvcrm_alterar_dados_atendimento_api
+  - [x] cvcrm_retornar_tarefas_atendimento_api
+  - [x] cvcrm_retornar_tarefa_api
+  - [x] cvcrm_encerrar_tarefa_api
+
+- [x] Assistências Técnicas API
+  - [x] cvcrm_cadastrar_assistencia_api
+  - [x] cvcrm_listar_assistencias_api
+  - [x] cvcrm_retornar_assistencia_api
+  - [x] cvcrm_alterar_assistencia_api
+  - [x] cvcrm_alterar_situacao_assistencia_api
+  - [x] cvcrm_cadastrar_visita_assistencia_api
+  - [x] cvcrm_alterar_visita_assistencia_api
+  - [x] cvcrm_alterar_situacao_visita_assistencia_api
+  - [x] cvcrm_listar_equipes_assistencia_api
+  - [x] cvcrm_listar_usuarios_equipe_assistencia_api
+  - [x] cvcrm_adicionar_item_assistencia_api
+  - [x] cvcrm_alterar_item_assistencia_api
+  - [x] cvcrm_alterar_situacao_item_assistencia_api
+  - [x] cvcrm_remover_item_assistencia_api
+  - [x] cvcrm_listar_localidades_assistencia_api
+  - [x] cvcrm_listar_area_comum_assistencia_api
+  - [x] cvcrm_listar_itens_manutencao_assistencia_api
+  - [x] cvcrm_cadastrar_item_manutencao_assistencia_api
+  - [x] cvcrm_cadastrar_mensagem_assistencia_api
+  - [x] cvcrm_assistencia_upload_arquivos_api
+
+- [x] Patologias
+  - [x] cvcrm_listar_patologias_api
+  - [x] cvcrm_cadastrar_patologia_api
+  - [x] cvcrm_retornar_patologia_api
+  - [x] cvcrm_atualizar_patologia_api
+  - [x] cvcrm_remover_patologia_api
+
+- [x] Cadastros Gerais
+  - [x] cvcrm_listar_tipos_associacoes_api
+  - [x] cvcrm_listar_tipos_arquivos_api
+  - [x] cvcrm_listar_correspondentes_usuarios_api
+  - [x] cvcrm_cadastrar_correspondente_usuario_api
+  - [x] cvcrm_listar_correspondentes_empresas_api
+  - [x] cvcrm_cadastrar_correspondente_empresa_api
+
+- [x] Kit Decoração
+  - [x] cvcrm_listar_kit_decoracao_api
+
+- [x] Clientes
+  - [x] cvcrm_cadastrar_cliente_api
+  - [x] cvcrm_listar_clientes_api
+  - [x] cvcrm_atualizar_sinalizador_juridico_cliente_api
+
+- [x] Comissões
+  - [x] cvcrm_listar_comissoes_api
+  - [x] cvcrm_alterar_situacao_comissao_api
+  - [x] cvcrm_cadastrar_comissao_api
+  - [x] cvcrm_listar_pagamentos_comissao_api
+  - [x] cvcrm_alterar_pagamento_comissao_api
+  - [x] cvcrm_liberar_pagamento_comissao_api
+  - [x] cvcrm_bloquear_pagamento_comissao_api
+
+- [x] CVBot / Comunicações
+  - [x] cvcrm_cvbot_listar_assuntos_api
+  - [x] cvcrm_cvbot_listar_subassuntos_api
+  - [x] cvcrm_cvbot_listar_assuntos_atendimento_api
+  - [x] cvcrm_cvbot_listar_atendimentos_api
+  - [x] cvcrm_cvbot_cadastrar_atendimento_api
+  - [x] cvcrm_cvbot_finalizar_atendimento_api
+  - [x] cvcrm_cvbot_solicitar_envio_contratos_api
+  - [x] cvcrm_cvbot_listar_empreendimentos_api
+  - [x] cvcrm_cvbot_listar_unidades_do_empreendimento_api
+
+- [x] Corretores
+  - [x] cvcrm_cadastrar_corretor_api
+  - [x] cvcrm_listar_corretores_api
+  - [x] cvcrm_cadastrar_corretor_pj_api
+
+

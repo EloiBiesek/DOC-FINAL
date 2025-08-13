@@ -1,0 +1,29 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/cvio/corretor_pessoa_juridica",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "documento": { "type": "string", "description": "CNPJ da empresa (válido)" },
+      "idcorretor_int": { "type": "string", "description": "Identificador do sistema legado" },
+      "razao_social": { "type": "string", "description": "Razão social da empresa" },
+      "email": { "type": "string", "description": "Email da empresa" },
+      "telefone": { "type": "string", "description": "Telefone da empresa" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/cvio/corretor_pessoa_juridica \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "documento": "12345678000199",\\n  "razao_social": "Corretora XYZ Ltda"\\n}'"
+  },
+  "responses": {
+    "200": { "description": "Corretor PJ cadastrado/atualizado" },
+    "400": { "description": "Erro ao cadastrar corretor PJ" }
+  }
+}
+
+

@@ -1,0 +1,29 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/cvio/corretor",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "documento": { "type": "string", "description": "CPF do corretor (válido)" },
+      "idcorretor_int": { "type": "string", "description": "Identificador do sistema legado" },
+      "nome": { "type": "string", "description": "Nome do corretor" },
+      "email": { "type": "string", "description": "Email do corretor" },
+      "telefone": { "type": "string", "description": "Telefone do corretor" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/cvio/corretor \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "documento": "12345678909",\\n  "nome": "Corretor Exemplo"\\n}'"
+  },
+  "responses": {
+    "200": { "description": "Corretor cadastrado/atualizado" },
+    "400": { "description": "Erro ao cadastrar corretor" }
+  }
+}
+
+

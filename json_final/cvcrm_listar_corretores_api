@@ -1,0 +1,23 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/cvio/corretor",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "query": {
+      "documento": { "type": "string", "description": "CPF do corretor" },
+      "idcorretor_int": { "type": "string", "description": "Identificador do sistema legado" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url 'https://integracao.cvcrm.com.br/api/cvio/corretor?documento=12345678909' \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "Dados dos corretores", "body": { "type": "array", "items": { "type": "object" } } }
+  }
+}
+
+
