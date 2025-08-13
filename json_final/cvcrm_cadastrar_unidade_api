@@ -1,0 +1,29 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/cvio/unidade",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "idempreendimento": { "type": "integer", "description": "ID do empreendimento", "required": true },
+      "idetapa": { "type": "integer", "description": "ID da etapa", "required": true },
+      "idbloco_int": { "type": "string", "description": "Identificador do bloco no sistema legado", "required": true },
+      "nome": { "type": "string", "description": "Identificação da unidade", "required": true },
+      "area_privativa": { "type": "number", "description": "Área privativa" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/cvio/unidade \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "idempreendimento": 1,\\n  "idetapa": 10,\\n  "idbloco_int": "BLOCO-A",\\n  "nome": "Apto 101"\\n}'"
+  },
+  "responses": {
+    "200": { "description": "Unidade cadastrada/atualizada" },
+    "400": { "description": "Erro ao cadastrar unidade" }
+  }
+}
+
+

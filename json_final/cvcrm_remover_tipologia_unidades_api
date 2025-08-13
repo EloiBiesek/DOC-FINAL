@@ -1,0 +1,21 @@
+{
+  "method": "DELETE",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v2/cv/tipologias-unidades/{idtipologia}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "path": { "idtipologia": { "type": "integer", "description": "ID da tipologia", "required": true } }
+  },
+  "examples": {
+    "curl": "curl --request DELETE \\\n+--url https://integracao.cvcrm.com.br/api/v2/cv/tipologias-unidades/5 \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "Tipologia removida" },
+    "404": { "description": "Tipologia não encontrada" }
+  }
+}
+
+

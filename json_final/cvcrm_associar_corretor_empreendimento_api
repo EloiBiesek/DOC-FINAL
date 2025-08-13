@@ -1,0 +1,23 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v2/cv/empreendimentos/corretores",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "idempreendimento": { "type": "integer", "required": true },
+      "idcorretor": { "type": "integer", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v2/cv/empreendimentos/corretores \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "idempreendimento": 123,\\n  "idcorretor": 50\\n}'"
+  },
+  "responses": { "200": { "description": "Corretor associado" }, "400": { "description": "Erro ao associar corretor" } }
+}
+
+

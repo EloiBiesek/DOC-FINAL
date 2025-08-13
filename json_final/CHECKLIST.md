@@ -86,5 +86,18 @@
   - [x] cvcrm_retornar_empreendimento_api
   - [x] cvcrm_cadastrar_etapa_api
   - [x] cvcrm_cadastrar_bloco_api
+  - [x] cvcrm_cadastrar_unidade_api
+  - [x] cvcrm_bloquear_unidade_api
+  - [x] cvcrm_listar_motivos_bloqueio_unidade_api
+  - [x] cvcrm_listar_campos_obrigatorios_empreendimentos_api
+  - [x] cvcrm_retornar_erp_sienge_empreendimento_api
+  - [x] cvcrm_atualizar_referencia_externa_empreendimento_api
+  - [x] cvcrm_listar_tipologias_unidades_api
+  - [x] cvcrm_cadastrar_tipologia_unidades_api
+  - [x] cvcrm_atualizar_tipologia_unidades_api
+  - [x] cvcrm_remover_tipologia_unidades_api
+  - [x] cvcrm_associar_corretor_empreendimento_api
+  - [x] cvcrm_associar_imobiliaria_empreendimento_api
+  - [x] cvcrm_retornar_unidade_api
 
 

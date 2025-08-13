@@ -1,0 +1,22 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/empreendimentos/campos_obrigatorios",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "query": {
+      "obrigatorio": { "type": "string", "description": "S ou N para filtrar campos obrigatórios" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url 'https://integracao.cvcrm.com.br/api/v1/cv/empreendimentos/campos_obrigatorios?obrigatorio=S' \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "Lista de campos (com indicador de obrigatoriedade)", "body": { "type": "array", "items": { "type": "object" } } }
+  }
+}
+
+

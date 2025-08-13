@@ -1,0 +1,27 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/cvio/bloquear_unidade",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "idunidade": { "type": "integer", "description": "ID da unidade", "required": true },
+      "bloquear": { "type": "string", "description": "S para bloquear, N para disponibilizar", "required": true },
+      "idmotivo": { "type": "integer", "description": "ID do motivo do bloqueio" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/cvio/bloquear_unidade \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "idunidade": 999,\\n  "bloquear": "S",\\n  "idmotivo": 3\\n}'"
+  },
+  "responses": {
+    "200": { "description": "Unidade bloqueada/disponibilizada" },
+    "400": { "description": "Erro na operação de bloqueio" }
+  }
+}
+
+

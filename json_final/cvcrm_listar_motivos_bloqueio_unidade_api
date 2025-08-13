@@ -1,0 +1,23 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/motivos_bloqueio_unidade",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "query": {
+      "idmotivo": { "type": "integer", "description": "Filtra por ID do motivo" },
+      "nome": { "type": "string", "description": "Filtra por nome do motivo" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url 'https://integracao.cvcrm.com.br/api/v1/cv/motivos_bloqueio_unidade?nome=Reserva' \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "Lista de motivos de bloqueio", "body": { "type": "array", "items": { "type": "object" } } }
+  }
+}
+
+
