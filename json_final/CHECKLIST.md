@@ -1,3 +1,8 @@
+- [x] Portal do Cliente - Unidades
+  - [x] cvcrm_portal_listar_unidades_api
+  - [x] cvcrm_portal_retornar_unidade_api
+  - [x] cvcrm_portal_listar_unidade_documentos_api
+  - [x] cvcrm_portal_listar_unidade_documentos_pastas_api
 - [x] Portal do Cliente - Autenticação e Agendamentos
   - [x] cvcrm_portal_login_api
   - [x] cvcrm_portal_login_sindico_api

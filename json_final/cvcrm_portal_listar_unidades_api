@@ -1,0 +1,16 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/unidades",
+  "parameters": {
+    "headers": {
+      "authorization": { "type": "string", "description": "Bearer <JWT>", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cliente/unidades \\\n+--header 'accept: application/json' \\\n+--header 'authorization: Bearer SEU_TOKEN'"
+  },
+  "responses": { "200": { "description": "Unidades ativas do usuário", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+
