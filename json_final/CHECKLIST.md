@@ -237,3 +237,10 @@
   - [x] cvcrm_cvdw_atendimentos_times_api
   - [x] cvcrm_cvdw_atendimentos_times_integrantes_api
 
+   - [x] Leads (CVDW)
+     - [x] cvcrm_cvdw_leads_corretores_api
+     - [x] cvcrm_cvdw_leads_api
+     - [x] cvcrm_cvdw_leads_conversoes_api
+     - [x] cvcrm_cvdw_leads_ganhos_api
+     - [x] cvcrm_cvdw_leads_historico_situacoes_api
+
