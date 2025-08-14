@@ -4,6 +4,34 @@
   "path": "/api/cvio/lead",
   "parameters": {
     "headers": {
+      "content-type": { "type": "string", "default": "application/json" }
+    },
+    "path": {},
+    "query": {},
+    "body": {
+      "email": { "type": "string" },
+      "telefone": { "type": "string" },
+      "idempreendimento": { "type": "integer" },
+      "idunidade": { "type": "integer" },
+      "idsituacao": { "type": "integer" }
+    },
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/cvio/lead \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--data '{\"email\":\"lead@exemplo.com\",\"telefone\":\"+5511999999999\"}'"
+  },
+  "responses": {
+    "201": { "description": "Lead criado" },
+    "400": { "description": "Erro de validação" }
+  }
+}
+
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/cvio/lead",
+  "parameters": {
+    "headers": {
       "email": { "type": "string", "description": "Email do usuário", "required": true },
       "token": { "type": "string", "description": "Token de autenticação", "required": true },
       "accept": { "type": "string", "description": "application/json" },

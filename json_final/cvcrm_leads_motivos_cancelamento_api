@@ -1,0 +1,18 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/motivos_cancelamento_lead",
+  "parameters": {
+    "headers": {},
+    "path": {},
+    "query": { "pagina": { "type": "integer" }, "registros_por_pagina": { "type": "integer" }, "detalhamento": { "type": "boolean" }, "exibir_inativos": { "type": "boolean" } },
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url 'https://integracao.cvcrm.com.br/api/v1/cv/motivos_cancelamento_lead?pagina=1' \\\n+--header 'accept: application/json'"
+  },
+  "responses": { "200": { "description": "Motivos de cancelamento", "body": { "type": "array" } } }
+}
+
+

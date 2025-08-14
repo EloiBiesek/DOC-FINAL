@@ -1,0 +1,18 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/cvio/lead_tarefas",
+  "parameters": {
+    "headers": {},
+    "path": {},
+    "query": {},
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/cvio/lead_tarefas \\\n+--header 'accept: application/json'"
+  },
+  "responses": { "200": { "description": "Tarefas de leads", "body": { "type": "array" } } }
+}
+
+

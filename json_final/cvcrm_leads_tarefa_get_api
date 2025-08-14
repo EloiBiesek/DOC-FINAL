@@ -1,0 +1,18 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/cvio/lead_tarefas/{idTarefa}",
+  "parameters": {
+    "headers": {},
+    "path": { "idTarefa": { "type": "integer", "required": true } },
+    "query": {},
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/cvio/lead_tarefas/123 \\\n+--header 'accept: application/json'"
+  },
+  "responses": { "200": { "description": "Detalhe da tarefa", "body": { "type": "object" } }, "404": { "description": "Não encontrado" } }
+}
+
+

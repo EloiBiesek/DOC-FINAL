@@ -1,0 +1,18 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/filas_distribuicao_leads",
+  "parameters": {
+    "headers": {},
+    "path": {},
+    "query": { "tag": { "type": "string", "description": "Tag da fila (opcional)" } },
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cv/filas_distribuicao_leads?tag=meufiltro \\\n+--header 'accept: application/json'"
+  },
+  "responses": { "200": { "description": "Atendentes das filas", "body": { "type": "array" } } }
+}
+
+

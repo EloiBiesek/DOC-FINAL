@@ -1,0 +1,22 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/cvio/lead_tarefas/cadastrar",
+  "parameters": {
+    "headers": { "content-type": { "type": "string", "default": "application/json" } },
+    "path": {},
+    "query": {},
+    "body": {
+      "nome": { "type": "string", "required": true },
+      "data": { "type": "string" },
+      "situacao": { "type": "string" }
+    },
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/cvio/lead_tarefas/cadastrar \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--data '{\"nome\":\"Ligar para cliente\",\"data\":\"2025-08-01\"}'"
+  },
+  "responses": { "201": { "description": "Tarefa criada" }, "400": { "description": "Erro de validação" } }
+}
+
+

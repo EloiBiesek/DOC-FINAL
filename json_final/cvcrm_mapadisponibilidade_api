@@ -1,0 +1,21 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/mapadisponibilidade/{idempreendimento}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string" },
+      "token": { "type": "string" }
+    },
+    "path": { "idempreendimento": { "type": "integer", "required": true } },
+    "query": {},
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://DOMINIO.cvcrm.com.br/api/v1/cv/mapadisponibilidade/123 \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": { "200": { "description": "Mapa de disponibilidade", "body": { "type": "object|array" } } }
+}
+
+

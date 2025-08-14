@@ -1,0 +1,18 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/lead/consultaratendimento",
+  "parameters": {
+    "headers": {},
+    "path": {},
+    "query": { "idlead": { "type": "integer" }, "telefone": { "type": "string" }, "email": { "type": "string" } },
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url 'https://integracao.cvcrm.com.br/api/v1/cv/lead/consultaratendimento?idlead=123' \\\n+--header 'accept: application/json'"
+  },
+  "responses": { "200": { "description": "Atendimentos do lead", "body": { "type": "array" } }, "400": { "description": "Parâmetros inválidos" } }
+}
+
+
