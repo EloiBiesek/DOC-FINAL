@@ -251,3 +251,13 @@
      - [x] cvcrm_cvdw_leads_visitas_api
      - [x] cvcrm_cvdw_leads_workflow_tempo_api
 
+  - [x] Distribuição e Administrativos (CVDW)
+    - [x] cvcrm_cvdw_distribuicao_leads_api
+    - [x] cvcrm_cvdw_usuarios_administrativos_api
+    - [x] cvcrm_cvdw_processos_api
+    - [x] cvcrm_cvdw_precadastros_api
+    - [x] cvcrm_cvdw_precadastro_workflow_tempo_api
+    - [x] cvcrm_cvdw_precadastro_historico_situacoes_api
+    - [x] cvcrm_cvdw_pesquisas_api
+    - [x] cvcrm_cvdw_pesquisas_perguntas_api
+
