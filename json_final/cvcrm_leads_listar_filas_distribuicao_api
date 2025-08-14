@@ -1,0 +1,10 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/cvio/filas_distribuicao_leads",
+  "parameters": { "headers": { "email": { "type": "string", "required": true }, "token": { "type": "string", "required": true } }, "query": { "idfila_distribuicao_leads": { "type": "integer" }, "pagina": { "type": "integer" }, "limite": { "type": "integer" } } },
+  "examples": { "curl": "curl --request GET \\\n+--url 'https://integracao.cvcrm.com.br/api/cvio/filas_distribuicao_leads?pagina=1&limite=50' \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'" },
+  "responses": { "200": { "description": "Filas de distribuição de leads", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

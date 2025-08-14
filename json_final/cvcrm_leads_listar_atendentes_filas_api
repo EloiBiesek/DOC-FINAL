@@ -1,0 +1,13 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/filas_distribuicao_leads",
+  "parameters": {
+    "headers": { "email": { "type": "string", "required": true }, "token": { "type": "string", "required": true } },
+    "query": { "tag": { "type": "string", "description": "Filtra por tag de fila" } }
+  },
+  "examples": { "curl": "curl --request GET \\\n+--url 'https://integracao.cvcrm.com.br/api/v1/cv/filas_distribuicao_leads?tag=IMOB' \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'" },
+  "responses": { "200": { "description": "Atendentes das filas", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

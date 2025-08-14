@@ -1,3 +1,9 @@
+- [x] Leads
+  - [x] cvcrm_leads_listar_api
+  - [x] cvcrm_leads_cadastrar_api
+  - [x] cvcrm_leads_listar_atendentes_filas_api
+  - [x] cvcrm_leads_consultar_atendimento_api
+  - [x] cvcrm_leads_listar_filas_distribuicao_api
 - [x] Portal do Cliente - Notificações
   - [x] cvcrm_portal_notificacoes_cadastrar_dispositivo_api
   - [x] cvcrm_portal_notificacoes_remover_dispositivo_api
