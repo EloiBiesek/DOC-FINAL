@@ -260,4 +260,13 @@
     - [x] cvcrm_cvdw_precadastro_historico_situacoes_api
     - [x] cvcrm_cvdw_pesquisas_api
     - [x] cvcrm_cvdw_pesquisas_perguntas_api
+    - [x] cvcrm_cvdw_pesquisas_respostas_api
+    - [x] cvcrm_cvdw_repasses_api
+    - [x] cvcrm_cvdw_repasses_workflow_tempo_api
+    - [x] cvcrm_cvdw_repasses_historico_situacoes_api
+    - [x] cvcrm_cvdw_campanhas_ativacao_api
+    - [x] cvcrm_cvdw_campos_adicionais_api
+    - [x] cvcrm_cvdw_pessoas_api
+    - [x] cvcrm_cvdw_pessoas_contatos_api
+    - [x] cvcrm_cvdw_pessoas_profissional_api
 
