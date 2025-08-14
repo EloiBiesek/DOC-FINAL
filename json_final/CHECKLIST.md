@@ -243,4 +243,11 @@
      - [x] cvcrm_cvdw_leads_conversoes_api
      - [x] cvcrm_cvdw_leads_ganhos_api
      - [x] cvcrm_cvdw_leads_historico_situacoes_api
+     - [x] cvcrm_cvdw_leads_infos_api
+     - [x] cvcrm_cvdw_leads_interacoes_api
+     - [x] cvcrm_cvdw_leads_momentos_api
+     - [x] cvcrm_cvdw_leads_perdas_api
+     - [x] cvcrm_cvdw_leads_tarefas_api
+     - [x] cvcrm_cvdw_leads_visitas_api
+     - [x] cvcrm_cvdw_leads_workflow_tempo_api
 
