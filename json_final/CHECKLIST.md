@@ -219,4 +219,9 @@
    - [x] cvcrm_cvdw_reservas_associados_api
    - [x] cvcrm_cvdw_reservas_contratos_api
    - [x] cvcrm_cvdw_reservas_workflow_tempo_api
+  - [x] cvcrm_cvdw_reservas_campos_adicionais_api
+  - [x] cvcrm_cvdw_reservas_sienge_api
+  - [x] cvcrm_cvdw_reservas_registros_flags_api
+  - [x] cvcrm_cvdw_simulacoes_api
+  - [x] cvcrm_cvdw_vendas_api
 
