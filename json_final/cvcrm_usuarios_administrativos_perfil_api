@@ -1,0 +1,25 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/usuariosAdministrativos/perfil",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "required": true },
+      "token": { "type": "string", "required": true }
+    },
+    "path": {},
+    "query": {},
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cv/usuariosAdministrativos/perfil \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "Perfil de acesso do usuário administrativo", "body": { "type": "object" } },
+    "400": { "description": "Erro de solicitação, revise os parâmetros" },
+    "404": { "description": "Não encontrado" }
+  }
+}
+
+

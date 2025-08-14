@@ -183,6 +183,24 @@
   - [x] cvcrm_listar_corretores_api
   - [x] cvcrm_cadastrar_corretor_pj_api
 
+  - [x] Usuários Administrativos (#27)
+    - [x] cvcrm_usuarios_administrativos_listar_api
+    - [x] cvcrm_usuarios_administrativos_perfil_api
+    - [x] cvcrm_usuarios_administrativos_auth_externa_enviar_codigo_api
+    - [x] cvcrm_usuarios_administrativos_auth_externa_validar_api
+    - [x] cvcrm_usuarios_administrativos_esqueci_senha_enviar_codigo_api
+    - [x] cvcrm_usuarios_administrativos_esqueci_senha_validar_codigo_api
+    - [x] cvcrm_usuarios_administrativos_esqueci_senha_alterar_api
+    - [x] cvcrm_usuarios_administrativos_senha_expirada_alterar_api
+
+  - [x] Workflow API (#28)
+    - [x] cvcrm_workflow_listar_situacoes_api
+    - [x] cvcrm_workflow_listar_situacoes_disponiveis_api
+
+  - [x] Geral API (#29)
+    - [x] cvcrm_geral_chat_get_restore_id_api
+    - [x] cvcrm_geral_chat_post_restore_id_api
+    - [x] cvcrm_geral_auth_token_api
 - [x] Empreendimentos
   - [x] cvcrm_cadastrar_empreendimento_api
   - [x] cvcrm_listar_empreendimentos_api

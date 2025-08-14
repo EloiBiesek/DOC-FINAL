@@ -1,0 +1,25 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v2/cv/esqueci-senha/enviar-codigo",
+  "parameters": {
+    "headers": {
+      "content-type": { "type": "string", "default": "application/json" }
+    },
+    "path": {},
+    "query": {},
+    "body": {
+      "email": { "type": "string", "required": true, "description": "Email do usuário administrativo" }
+    },
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v2/cv/esqueci-senha/enviar-codigo \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--data '{\"email\":\"usuario@empresa.com\"}'"
+  },
+  "responses": {
+    "200": { "description": "Código de recuperação enviado" },
+    "400": { "description": "Erro de solicitação" }
+  }
+}
+
+

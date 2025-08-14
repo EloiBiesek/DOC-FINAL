@@ -1,0 +1,28 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/workflow/{funcionalidade}/{idSituacao}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "required": true },
+      "token": { "type": "string", "required": true }
+    },
+    "path": {
+      "funcionalidade": { "type": "string", "required": true },
+      "idSituacao": { "type": "integer", "required": true }
+    },
+    "query": {},
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cv/workflow/reservas/1 \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "Situações disponíveis a partir da situação informada", "body": { "type": "array" } },
+    "400": { "description": "Erro de solicitação" },
+    "404": { "description": "Não encontrado" }
+  }
+}
+
+

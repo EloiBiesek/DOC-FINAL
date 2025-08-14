@@ -1,0 +1,26 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v2/cv/esqueci-senha/validar-codigo",
+  "parameters": {
+    "headers": {
+      "content-type": { "type": "string", "default": "application/json" }
+    },
+    "path": {},
+    "query": {},
+    "body": {
+      "email": { "type": "string", "required": true },
+      "codigo": { "type": "string", "required": true }
+    },
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v2/cv/esqueci-senha/validar-codigo \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--data '{\"email\":\"usuario@empresa.com\",\"codigo\":\"123456\"}'"
+  },
+  "responses": {
+    "200": { "description": "Código válido" },
+    "400": { "description": "Código inválido" }
+  }
+}
+
+

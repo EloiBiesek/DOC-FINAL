@@ -1,0 +1,26 @@
+{
+  "method": "POST",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/chat/restoreid",
+  "parameters": {
+    "headers": {
+      "authorization": { "type": "string", "required": true, "description": "Bearer <JWT>" },
+      "content-type": { "type": "string", "default": "application/json" }
+    },
+    "path": {},
+    "query": {},
+    "body": {
+      "token": { "type": "string", "required": true, "description": "Token para atualização do restore id" }
+    },
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://DOMINIO.cvcrm.com.br/api/chat/restoreid \\\n+--header 'accept: application/json' \\\n+--header 'authorization: Bearer SEU_TOKEN' \\\n+--header 'content-type: application/json' \\\n+--data '{\"token\":\"RESTORE_TOKEN\"}'"
+  },
+  "responses": {
+    "200": { "description": "Restore id atualizado", "body": { "type": "object" } },
+    "401": { "description": "Não autorizado" }
+  }
+}
+
+

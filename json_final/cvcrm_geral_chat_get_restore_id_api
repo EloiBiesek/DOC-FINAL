@@ -1,0 +1,23 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/chat/restoreid",
+  "parameters": {
+    "headers": {
+      "authorization": { "type": "string", "required": true, "description": "Bearer <JWT>" }
+    },
+    "path": {},
+    "query": {},
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://DOMINIO.cvcrm.com.br/api/chat/restoreid \\\n+--header 'accept: application/json' \\\n+--header 'authorization: Bearer SEU_TOKEN'"
+  },
+  "responses": {
+    "200": { "description": "Restore id retornado", "body": { "type": "object" } },
+    "401": { "description": "Não autorizado" }
+  }
+}
+
+

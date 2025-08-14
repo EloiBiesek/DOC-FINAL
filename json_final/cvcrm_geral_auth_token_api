@@ -1,0 +1,26 @@
+{
+  "method": "POST",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v3/auth/token",
+  "parameters": {
+    "headers": {
+      "content-type": { "type": "string", "default": "application/json" }
+    },
+    "path": {},
+    "query": {},
+    "body": {
+      "email": { "type": "string", "required": true },
+      "senha": { "type": "string", "required": true }
+    },
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://DOMINIO.cvcrm.com.br/api/v3/auth/token \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--data '{\"email\":\"usuario@empresa.com\",\"senha\":\"SenhaForte@2024\"}'"
+  },
+  "responses": {
+    "200": { "description": "Token de acesso gerado", "body": { "type": "object" } },
+    "401": { "description": "Credenciais inválidas" }
+  }
+}
+
+
