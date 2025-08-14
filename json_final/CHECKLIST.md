@@ -1,3 +1,32 @@
+- [x] Portal do Cliente - Notificações
+  - [x] cvcrm_portal_notificacoes_cadastrar_dispositivo_api
+  - [x] cvcrm_portal_notificacoes_remover_dispositivo_api
+  - [x] cvcrm_portal_notificacoes_listar_api
+  - [x] cvcrm_portal_notificacoes_marcar_lida_api
+  - [x] cvcrm_portal_notificacoes_listar_configuracoes_api
+  - [x] cvcrm_portal_notificacoes_criar_atualizar_configuracao_api
+
+- [x] Portal do Cliente - Benefícios/FAQ/Permissões
+  - [x] cvcrm_portal_beneficios_listar_marketplaces_api
+  - [x] cvcrm_portal_perguntas_frequentes_listar_api
+  - [x] cvcrm_portal_permissoes_listar_perfis_cliente_api
+  - [x] cvcrm_portal_permissoes_listar_sindico_api
+
+- [x] Portal do Cliente - Pesquisas
+  - [x] cvcrm_portal_pesquisas_listar_api
+  - [x] cvcrm_portal_pesquisas_respostas_api
+
+- [x] Portal do Cliente - Pessoa e Reset de Senha
+  - [x] cvcrm_portal_pessoa_cadastrar_api
+  - [x] cvcrm_portal_pessoa_get_usuario_logado_api
+  - [x] cvcrm_portal_pessoa_modificar_api
+  - [x] cvcrm_portal_pessoa_atualizar_endereco_api
+  - [x] cvcrm_portal_pessoa_token_api
+  - [x] cvcrm_portal_pessoa_dados_por_documento_api
+  - [x] cvcrm_portal_reset_senha_email_api
+  - [x] cvcrm_portal_reset_senha_email_sindico_api
+  - [x] cvcrm_portal_reset_senha_sms_api
+  - [x] cvcrm_portal_reset_senha_sms_sindico_api
 - [x] Portal do Cliente - Configurações e Conteúdos
   - [x] cvcrm_portal_configuracoes_api
   - [x] cvcrm_portal_retornar_multiplos_portais_api

@@ -1,0 +1,10 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/resetar-senha-email-sindico",
+  "parameters": { "headers": { "accept": { "type": "string", "description": "application/json" }, "content-type": { "type": "string", "description": "application/json" } }, "body": { "email": { "type": "string", "required": true } } },
+  "examples": { "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/cliente/resetar-senha-email-sindico \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--data '{\\n  "email": "sindico@email.com"\\n}'" },
+  "responses": { "200": { "description": "Email de redefinição enviado ao síndico" } }
+}
+
+

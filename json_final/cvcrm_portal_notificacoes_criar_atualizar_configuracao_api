@@ -1,0 +1,10 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/configuracao-notificacoes",
+  "parameters": { "headers": { "authorization": { "type": "string", "description": "Bearer <JWT>", "required": true }, "accept": { "type": "string", "description": "application/json" }, "content-type": { "type": "string", "description": "application/json" } }, "body": { "canal": { "type": "string", "required": true }, "ativo": { "type": "boolean", "required": true } } },
+  "examples": { "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/cliente/configuracao-notificacoes \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'authorization: Bearer SEU_TOKEN' \\\n+--data '{\\n  "canal": "email",\\n  "ativo": true\\n}'" },
+  "responses": { "200": { "description": "Configuração criada/atualizada" } }
+}
+
+

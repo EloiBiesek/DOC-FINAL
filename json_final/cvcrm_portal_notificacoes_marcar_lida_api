@@ -1,0 +1,10 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/notificacoes/{idnotificacao}/lida",
+  "parameters": { "headers": { "authorization": { "type": "string", "description": "Bearer <JWT>", "required": true } }, "path": { "idnotificacao": { "type": "integer", "required": true } } },
+  "examples": { "curl": "curl --request PUT \\\n+--url https://integracao.cvcrm.com.br/api/v1/cliente/notificacoes/123/lida \\\n+--header 'accept: application/json' \\\n+--header 'authorization: Bearer SEU_TOKEN'" },
+  "responses": { "200": { "description": "Notificação marcada como lida" } }
+}
+
+

@@ -1,0 +1,27 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/pessoa/atualizar-endereco",
+  "parameters": {
+    "headers": {
+      "authorization": { "type": "string", "description": "Bearer <JWT>", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "logradouro": { "type": "string" },
+      "numero": { "type": "string" },
+      "complemento": { "type": "string" },
+      "bairro": { "type": "string" },
+      "cidade": { "type": "string" },
+      "estado": { "type": "string", "description": "UF" },
+      "cep": { "type": "string" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request PUT \\\n+--url https://integracao.cvcrm.com.br/api/v1/cliente/pessoa/atualizar-endereco \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'authorization: Bearer SEU_TOKEN' \\\n+--data '{\\n  "logradouro": "Rua A",\\n  "numero": "123"\\n}'"
+  },
+  "responses": { "200": { "description": "Endereço atualizado" } }
+}
+
+

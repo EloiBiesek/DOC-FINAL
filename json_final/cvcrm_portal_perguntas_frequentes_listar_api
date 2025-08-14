@@ -1,0 +1,10 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cliente/perguntas-frequentes",
+  "parameters": { "headers": { "accept": { "type": "string", "description": "application/json" } } },
+  "examples": { "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cliente/perguntas-frequentes \\\n+--header 'accept: application/json'" },
+  "responses": { "200": { "description": "Perguntas frequentes", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+
