@@ -224,4 +224,9 @@
   - [x] cvcrm_cvdw_reservas_registros_flags_api
   - [x] cvcrm_cvdw_simulacoes_api
   - [x] cvcrm_cvdw_vendas_api
+  - [x] cvcrm_cvdw_unidades_situacao_api
+  - [x] cvcrm_cvdw_unidades_precos_api
+  - [x] cvcrm_cvdw_unidades_api
+  - [x] cvcrm_cvdw_agendamentos_vistorias_api
+  - [x] cvcrm_cvdw_assistencias_api
 
