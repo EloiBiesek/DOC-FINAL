@@ -1,0 +1,18 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/localidades/estados/{idestado}/cidades",
+  "parameters": {
+    "headers": {},
+    "path": { "idestado": { "type": "integer", "required": true } },
+    "query": {},
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://DOMINIO.cvcrm.com.br/api/v1/cv/localidades/estados/35/cidades \\\n+--header 'accept: application/json'"
+  },
+  "responses": { "200": { "description": "Lista de cidades do estado", "body": { "type": "array" } } }
+}
+
+

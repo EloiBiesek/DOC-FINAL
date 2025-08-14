@@ -1,0 +1,25 @@
+{
+  "method": "POST",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/cvio/serie",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string" },
+      "token": { "type": "string" },
+      "content-type": { "type": "string", "default": "application/json" }
+    },
+    "path": {},
+    "query": {},
+    "body": {
+      "idserie_int": { "type": "integer", "description": "Código interno da série (se existir atualiza)" },
+      "remover": { "type": "integer", "description": "Id para remover série" }
+    },
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://DOMINIO.cvcrm.com.br/api/cvio/serie \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--data '{\"idserie_int\":123}'"
+  },
+  "responses": { "200": { "description": "Série cadastrada/atualizada" } }
+}
+
+

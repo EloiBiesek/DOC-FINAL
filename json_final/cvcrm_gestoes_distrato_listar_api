@@ -1,0 +1,21 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/gestoes-distrato",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string" },
+      "token": { "type": "string" }
+    },
+    "path": {},
+    "query": { "iddistrato": { "type": "integer" }, "idreserva": { "type": "integer" }, "idpessoa": { "type": "integer" }, "documento": { "type": "string" } },
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://DOMINIO.cvcrm.com.br/api/v1/cv/gestoes-distrato \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": { "200": { "description": "Lista de gestões de distrato", "body": { "type": "array" } } }
+}
+
+

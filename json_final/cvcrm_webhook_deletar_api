@@ -1,0 +1,21 @@
+{
+  "method": "DELETE",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/webhook/{id}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string" },
+      "token": { "type": "string" }
+    },
+    "path": { "id": { "type": "integer", "required": true } },
+    "query": {},
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request DELETE \\\n+--url https://integracao.cvcrm.com.br/api/v1/cv/webhook/123 \\\n+--header 'accept: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'"
+  },
+  "responses": { "200": { "description": "Webhook deletado" }, "404": { "description": "Não encontrado" } }
+}
+
+

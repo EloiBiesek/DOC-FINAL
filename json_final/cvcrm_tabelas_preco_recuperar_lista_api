@@ -1,0 +1,21 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/tabelasdepreco",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string" },
+      "token": { "type": "string" }
+    },
+    "path": {},
+    "query": { "idtabela": { "type": "integer", "description": "Se enviado, retorna unidades" } },
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://DOMINIO.cvcrm.com.br/api/v1/cv/tabelasdepreco \\\n+--header 'accept: application/json'"
+  },
+  "responses": { "200": { "description": "Lista de tabelas de preço", "body": { "type": "array" } } }
+}
+
+

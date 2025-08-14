@@ -1,0 +1,25 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/webhook",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string" },
+      "token": { "type": "string" },
+      "content-type": { "type": "string", "default": "application/json" }
+    },
+    "path": {},
+    "query": {},
+    "body": {
+      "url": { "type": "string", "required": true },
+      "evento": { "type": "string", "required": true }
+    },
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/cv/webhook \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\"url\":\"https://meu.servico/webhook\",\"evento\":\"reserva_criada\"}'"
+  },
+  "responses": { "201": { "description": "Webhook criado" }, "400": { "description": "Erro de validação" } }
+}
+
+

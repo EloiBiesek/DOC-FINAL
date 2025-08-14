@@ -1,0 +1,21 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/workflow/{funcionalidade}/historico",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string" },
+      "token": { "type": "string" }
+    },
+    "path": { "funcionalidade": { "type": "string", "required": true } },
+    "query": {},
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://DOMINIO.cvcrm.com.br/api/v1/cv/workflow/reservas/historico \\\n+--header 'accept: application/json'"
+  },
+  "responses": { "200": { "description": "Histórico da funcionalidade", "body": { "type": "array" } } }
+}
+
+

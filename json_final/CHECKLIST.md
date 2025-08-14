@@ -296,3 +296,14 @@
     - [x] cvcrm_cvdw_imobiliarias_api
     - [x] cvcrm_cvdw_corretores_api
 
+ 
+  - [x] Indexadores (#16)
+    - [x] cvcrm_indexadores_api
+
+  - [x] Indicadores (#17)
+    - [x] cvcrm_indicadores_leads_api
+
+  - [x] Integrações (#18)
+    - [x] cvcrm_webhook_listar_api
+    - [x] cvcrm_webhook_adicionar_api
+    - [x] cvcrm_webhook_deletar_api

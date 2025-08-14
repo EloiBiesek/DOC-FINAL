@@ -1,0 +1,21 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/indicadores/leads",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string" },
+      "token": { "type": "string" }
+    },
+    "path": {},
+    "query": {},
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cv/indicadores/leads \\\n+--header 'accept: application/json'"
+  },
+  "responses": { "200": { "description": "Indicadores relacionados a leads", "body": { "type": "object" } } }
+}
+
+

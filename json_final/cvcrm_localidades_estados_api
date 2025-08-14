@@ -1,0 +1,18 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/localidades/estados",
+  "parameters": {
+    "headers": {},
+    "path": {},
+    "query": {},
+    "body": {},
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://DOMINIO.cvcrm.com.br/api/v1/cv/localidades/estados \\\n+--header 'accept: application/json'"
+  },
+  "responses": { "200": { "description": "Lista de estados", "body": { "type": "array" } } }
+}
+
+
