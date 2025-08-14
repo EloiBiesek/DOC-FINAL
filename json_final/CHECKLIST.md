@@ -211,4 +211,12 @@
    - [x] cvcrm_cvdw_listar_distratos_api
    - [x] cvcrm_cvdw_listar_reservas_api
    - [x] cvcrm_cvdw_reservas_comissoes_api
+   - [x] cvcrm_cvdw_reservas_comissoes_programacao_api
+   - [x] cvcrm_cvdw_reservas_coordenador_api
+   - [x] cvcrm_cvdw_reservas_historico_situacoes_api
+   - [x] cvcrm_cvdw_reservas_historico_api
+   - [x] cvcrm_cvdw_reservas_condicoes_api
+   - [x] cvcrm_cvdw_reservas_associados_api
+   - [x] cvcrm_cvdw_reservas_contratos_api
+   - [x] cvcrm_cvdw_reservas_workflow_tempo_api
 

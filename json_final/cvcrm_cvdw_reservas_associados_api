@@ -1,0 +1,32 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cvdw/reservas/associados",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "required": true },
+      "token": { "type": "string", "required": true }
+    },
+    "path": {},
+    "query": {},
+    "body": {
+      "pagina": { "type": "integer", "description": "Página desejada" },
+      "registros_por_pagina": { "type": "integer", "description": "Máximo 500" },
+      "a_partir_referencia": { "type": "integer", "description": "Retorna a partir deste id (ordenado por referencia_data)" },
+      "a_partir_data_referencia": { "type": "string", "description": "Data inicial da referência (YYYY-MM-DD)" },
+      "ate_data_referencia": { "type": "string", "description": "Data final da referência (YYYY-MM-DD)" }
+    },
+    "formData": {}
+  },
+  "examples": {
+    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cvdw/reservas/associados \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'",
+    "curl_with_body": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cvdw/reservas/associados \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\"pagina\":1,\"registros_por_pagina\":100}'"
+  },
+  "responses": {
+    "200": { "description": "Associados das reservas", "body": { "type": "array" } },
+    "400": { "description": "Erro de solicitação, revise os parâmetros" },
+    "404": { "description": "Não encontrado" }
+  }
+}
+
+
