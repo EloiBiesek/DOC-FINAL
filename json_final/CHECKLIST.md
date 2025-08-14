@@ -229,4 +229,11 @@
   - [x] cvcrm_cvdw_unidades_api
   - [x] cvcrm_cvdw_agendamentos_vistorias_api
   - [x] cvcrm_cvdw_assistencias_api
+  - [x] cvcrm_cvdw_atendimentos_api
+  - [x] cvcrm_cvdw_atendimentos_workflow_tempo_api
+  - [x] cvcrm_cvdw_atendimentos_interacoes_api
+  - [x] cvcrm_cvdw_atendimentos_respostas_api
+  - [x] cvcrm_cvdw_atendimentos_tarefas_api
+  - [x] cvcrm_cvdw_atendimentos_times_api
+  - [x] cvcrm_cvdw_atendimentos_times_integrantes_api
 
