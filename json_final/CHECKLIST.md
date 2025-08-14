@@ -269,4 +269,12 @@
     - [x] cvcrm_cvdw_pessoas_api
     - [x] cvcrm_cvdw_pessoas_contatos_api
     - [x] cvcrm_cvdw_pessoas_profissional_api
+    - [x] cvcrm_cvdw_pessoas_patrimoniais_api
+    - [x] cvcrm_cvdw_pessoas_bancarios_api
+    - [x] cvcrm_cvdw_pessoas_bens_empresa_api
+    - [x] cvcrm_cvdw_pessoas_tags_associadas_api
+    - [x] cvcrm_cvdw_correspondentes_usuarios_api
+    - [x] cvcrm_cvdw_correspondentes_empresas_api
+    - [x] cvcrm_cvdw_imobiliarias_api
+    - [x] cvcrm_cvdw_corretores_api
 
