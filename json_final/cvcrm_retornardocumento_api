@@ -1,0 +1,19 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/comercial/reservas/{idReserva}/documentos",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "path": {
+      "idReserva": { "type": "integer", "description": "ID da reserva", "required": true }
+    }
+  },
+  "responses": {
+    "200": { "description": "Documentos retornados", "body": { "documentos": { "type": "array", "items": { "type": "object" } } } }
+  }
+}
+
+

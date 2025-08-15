@@ -1,0 +1,19 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/comercial/reservas/cessao",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\n+--url https://integracao.cvcrm.com.br/api/v1/comercial/reservas/cessao \\n+--header 'accept: application/json'"
+  },
+  "responses": {
+    "200": { "description": "Lista de cessões", "body": { "cessoes": { "type": "array", "items": { "type": "object" } } } }
+  }
+}
+
+

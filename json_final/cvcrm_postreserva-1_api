@@ -1,0 +1,26 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/comercial/reservas",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "idUnidade": { "type": "integer", "description": "ID da unidade a ser reservada", "required": true },
+      "idCliente": { "type": "integer", "description": "ID do cliente que realiza a reserva", "required": true },
+      "condicoes": { "type": "object", "description": "Condições da reserva" }
+    }
+  },
+  "examples": {
+    "payload": { "idUnidade": 987, "idCliente": 456 },
+    "curl_with_body": "curl --request POST \\n+--url https://integracao.cvcrm.com.br/api/v1/comercial/reservas \\n+--header 'accept: application/json' \\n+--header 'content-type: application/json' \\n+--data '{\"idUnidade\":987,\"idCliente\":456}'"
+  },
+  "responses": {
+    "201": { "description": "Reserva criada", "body": { "idReserva": { "type": "integer" } } },
+    "400": { "description": "Requisição inválida" }
+  }
+}
+
+

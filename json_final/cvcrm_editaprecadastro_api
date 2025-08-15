@@ -1,0 +1,27 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/precadastro/{idPrecadastroOuCodigoInterno}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "path": {
+      "idPrecadastroOuCodigoInterno": { "type": "string", "description": "ID ou código interno do pré-cadastro", "required": true }
+    },
+    "body": {
+      "nome": { "type": "string", "description": "Nome atualizado" },
+      "email": { "type": "string", "description": "Email atualizado" }
+    }
+  },
+  "examples": {
+    "curl_with_body": "curl --request PUT \\n+--url https://integracao.cvcrm.com.br/api/v1/cv/precadastro/123 \\n+--header 'accept: application/json' \\n+--header 'content-type: application/json' \\n+--data '{\"nome\":\"João Atualizado\"}'"
+  },
+  "responses": {
+    "200": { "description": "Pré-cadastro atualizado" },
+    "404": { "description": "Pré-cadastro não encontrado" }
+  }
+}
+
+

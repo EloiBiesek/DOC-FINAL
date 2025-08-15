@@ -1,0 +1,18 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v2/comercial/reservas/mensagens",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "idReserva": { "type": "integer", "description": "ID da reserva", "required": true },
+      "mensagem": { "type": "string", "description": "Conteúdo da mensagem", "required": true }
+    }
+  },
+  "responses": { "201": { "description": "Mensagem cadastrada" }, "400": { "description": "Requisição inválida" } }
+}
+
+

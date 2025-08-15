@@ -1,0 +1,24 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v2/comercial/reservas/solicitar-distrato",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "idReserva": { "type": "integer", "description": "ID da reserva para solicitar distrato", "required": true },
+      "motivo": { "type": "string", "description": "Motivo da solicitação" }
+    }
+  },
+  "examples": {
+    "curl_with_body": "curl --request POST \\n+--url https://integracao.cvcrm.com.br/api/v2/comercial/reservas/solicitar-distrato \\n+--header 'accept: application/json' \\n+--header 'content-type: application/json' \\n+--data '{\"idReserva\":123,\"motivo\":\"Cliente solicitou\"}'"
+  },
+  "responses": {
+    "201": { "description": "Solicitação criada" },
+    "400": { "description": "Requisição inválida" }
+  }
+}
+
+

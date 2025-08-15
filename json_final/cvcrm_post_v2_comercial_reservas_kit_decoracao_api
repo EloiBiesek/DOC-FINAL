@@ -1,0 +1,18 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v2/comercial/reservas/kit-decoracao",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "idReserva": { "type": "integer", "description": "ID da reserva", "required": true },
+      "idKit": { "type": "integer", "description": "ID do kit de decoração a associar", "required": true }
+    }
+  },
+  "responses": { "201": { "description": "Kit associado" }, "400": { "description": "Requisição inválida" } }
+}
+
+

@@ -1,0 +1,22 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/financeiro/repasses",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "query": {
+      "filtro": { "type": "string", "description": "Filtro opcional" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\n+--url 'https://integracao.cvcrm.com.br/api/v1/financeiro/repasses' \\n+--header 'accept: application/json'"
+  },
+  "responses": {
+    "200": { "description": "Lista de repasses", "body": { "repasses": { "type": "array", "items": { "type": "object" } } } }
+  }
+}
+
+

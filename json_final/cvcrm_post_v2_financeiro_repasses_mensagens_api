@@ -1,0 +1,25 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v2/financeiro/repasses/mensagens",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "idRepasse": { "type": "integer", "description": "ID do repasse", "required": true },
+      "mensagem": { "type": "string", "description": "Mensagem a ser adicionada", "required": true }
+    }
+  },
+  "examples": {
+    "payload": { "idRepasse": 123, "mensagem": "Atualização" },
+    "curl_with_body": "curl --request POST \\n+--url https://integracao.cvcrm.com.br/api/v2/financeiro/repasses/mensagens \\n+--header 'accept: application/json' \\n+--header 'content-type: application/json' \\n+--data '{\"idRepasse\":123,\"mensagem\":\"Atualização\"}'"
+  },
+  "responses": {
+    "201": { "description": "Mensagem criada" },
+    "400": { "description": "Requisição inválida" }
+  }
+}
+
+

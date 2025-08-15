@@ -1,0 +1,24 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/comercial/reservas/contratos/enviar-assinatura-eletronica",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "idContrato": { "type": "integer", "description": "ID do contrato a ser enviado para assinatura", "required": true },
+      "provedorAssinatura": { "type": "string", "description": "Provedor de assinatura eletrônica" }
+    }
+  },
+  "examples": {
+    "curl_with_body": "curl --request POST \\n+--url https://integracao.cvcrm.com.br/api/v1/comercial/reservas/contratos/enviar-assinatura-eletronica \\n+--header 'accept: application/json' \\n+--header 'content-type: application/json' \\n+--data '{\"idContrato\":321,\"provedorAssinatura\":\"Docusign\"}'"
+  },
+  "responses": {
+    "200": { "description": "Contrato enviado para assinatura" },
+    "400": { "description": "Requisição inválida" }
+  }
+}
+
+

@@ -1,0 +1,23 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v2/cv/gestoes-time/{idtime}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "path": {
+      "idtime": { "type": "integer", "description": "ID do time", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\n+--url https://integracao.cvcrm.com.br/api/v2/cv/gestoes-time/456 \\n+--header 'accept: application/json'"
+  },
+  "responses": {
+    "200": { "description": "Gestão de time retornada", "body": { "idtime": { "type": "integer" }, "nome": { "type": "string" } } },
+    "404": { "description": "Não encontrado" }
+  }
+}
+
+

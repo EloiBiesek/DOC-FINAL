@@ -1,0 +1,32 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/precadastro/{idPrecadastroOuDocumento}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "path": {
+      "idPrecadastroOuDocumento": { "type": "string", "description": "ID do pré-cadastro ou documento do solicitante", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\n+--url https://integracao.cvcrm.com.br/api/v1/cv/precadastro/123456 \\n+--header 'accept: application/json'",
+    "description": "Recupera os dados do pré-cadastro pelo id ou documento"
+  },
+  "responses": {
+    "200": {
+      "description": "Pré-cadastro retornado",
+      "body": {
+        "idPrecadastro": { "type": "integer" },
+        "nome": { "type": "string" },
+        "documento": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    },
+    "404": { "description": "Pré-cadastro não encontrado" }
+  }
+}
+
+

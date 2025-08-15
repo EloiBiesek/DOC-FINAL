@@ -1,0 +1,18 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v2/comercial/reservas/usuario-correspondente",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "idReserva": { "type": "integer", "description": "ID da reserva", "required": true },
+      "idUsuarioCorrespondente": { "type": "integer", "description": "ID do usuário correspondente", "required": true }
+    }
+  },
+  "responses": { "200": { "description": "Correspondente alterado" }, "400": { "description": "Requisição inválida" } }
+}
+
+

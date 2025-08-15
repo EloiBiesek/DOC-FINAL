@@ -1,0 +1,24 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/profissoes/cadastrar",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "descricao": { "type": "string", "description": "Descrição da profissão", "required": true }
+    }
+  },
+  "examples": {
+    "payload": { "descricao": "Engenheiro Civil" },
+    "curl_with_body": "curl --request POST \\n+--url https://integracao.cvcrm.com.br/api/v1/cv/profissoes/cadastrar \\n+--header 'accept: application/json' \\n+--header 'content-type: application/json' \\n+--data '{\"descricao\":\"Engenheiro Civil\"}'"
+  },
+  "responses": {
+    "201": { "description": "Profissão cadastrada", "body": { "idProfissao": { "type": "integer" } } },
+    "400": { "description": "Requisição inválida" }
+  }
+}
+
+

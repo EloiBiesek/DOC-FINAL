@@ -1,0 +1,21 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/financeiro/lotes/cadastrar",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "descricao": { "type": "string", "description": "Descrição do lote", "required": true },
+      "itens": { "type": "array", "description": "Itens do lote", "items": { "type": "object" } }
+    }
+  },
+  "responses": {
+    "201": { "description": "Lote cadastrado" },
+    "400": { "description": "Requisição inválida" }
+  }
+}
+
+

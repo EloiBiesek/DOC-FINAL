@@ -381,61 +381,61 @@ Aqui está o checklist completo com os itens que ainda não foram processados, m
         * [x] cvcrm_portal_aceitar_termo_api
 
 22. API de Pré-cadastro
-    * [ ] Pré-cadastro
-        * [ ] cvcrm_retornaprecadastro_api
-        * [ ] cvcrm_cadastraprecadastro_api
-        * [ ] cvcrm_editaprecadastro_api
-        * [ ] cvcrm_retornar_documento_precadastro_api
-        * [ ] cvcrm_cadastrar_documento_precadastro_api
+    * [x] Pré-cadastro
+        * [x] cvcrm_retornaprecadastro_api
+        * [x] cvcrm_cadastraprecadastro_api
+        * [x] cvcrm_editaprecadastro_api
+        * [x] cvcrm_retornar_documento_precadastro_api
+        * [x] cvcrm_cadastrar_documento_precadastro_api
 
 23. Profissões
-    * [ ] Profissões
-        * [ ] cvcrm_retorarprofissoesprofissao_api
-        * [ ] cvcrm_cadastrarprofissao_api
+    * [x] Profissões
+        * [x] cvcrm_retorarprofissoesprofissao_api
+        * [x] cvcrm_cadastrarprofissao_api
 
 24. Notificações
-    * [ ] Notificações
-        * [ ] cvcrm_getrepasses_api
-        * [ ] cvcrm_postalterarsituacaorepasse_api
-        * [ ] cvcrm_post_v2_financeiro_repasses_mensagens_api
+    * [x] Notificações
+        * [x] cvcrm_getrepasses_api
+        * [x] cvcrm_postalterarsituacaorepasse_api
+        * [x] cvcrm_post_v2_financeiro_repasses_mensagens_api
 
 25. API de Reservas
     * [ ] Reservas (detalhadas)
-        * [ ] cvcrm_getreservas_api
-        * [ ] cvcrm_getreserva-1_api
-        * [ ] cvcrm_getreservaregrascomissao_api
-        * [ ] cvcrm_putreserva_api
-        * [ ] cvcrm_postreserva-1_api
-        * [ ] cvcrm_alterarsituacao-1_api
-        * [ ] cvcrm_informarvenda_api
-        * [ ] cvcrm_distratoparticionado_api
-        * [ ] cvcrm_distrato-3_api
-        * [ ] cvcrm_getsolicitacoesdistratos_api
-        * [ ] cvcrm_postsolicitardistrato_api
-        * [ ] cvcrm_getcessao_api
-        * [ ] cvcrm_cessao-1_api
-        * [ ] cvcrm_cancelamento-3_api
-        * [ ] cvcrm_getreservacontratos_api
-        * [ ] cvcrm_cadastrarcontrato_api
-        * [ ] cvcrm_assinturaeletronicacontrato_api
-        * [ ] cvcrm_contratosassinados_api
-        * [ ] cvcrm_cadastrarboleto_api
-        * [ ] cvcrm_atualizarboleto_api
-        * [ ] cvcrm_getlote_api
-        * [ ] cvcrm_cadastrarlote_api
-        * [ ] cvcrm_alterarlote_api
-        * [ ] cvcrm_retornardocumento_api
-        * [ ] cvcrm_cadastrardocumento_api
-        * [ ] cvcrm_getreservacondicaopagamentos_api
-        * [ ] cvcrm_getsiengereserva_api
-        * [ ] cvcrm_putsiengereserva_api
-        * [ ] cvcrm_retornarcampanha_api
-        * [ ] cvcrm_post_v2_comercial_reservas_mensagens_api
-        * [ ] cvcrm_get_v2_comercial_reservas_idreserva_mensagens_api
-        * [ ] cvcrm_getanalisescredito_api
-        * [ ] cvcrm_getkitdecoracao_api
-        * [ ] cvcrm_post_v2_comercial_reservas_kit_decoracao_api
-        * [ ] cvcrm_put_v2_comercial_reservas_usuario_correspondente_api
+        * [x] cvcrm_getreservas_api
+        * [x] cvcrm_getreserva-1_api
+        * [x] cvcrm_getreservaregrascomissao_api
+        * [x] cvcrm_putreserva_api
+        * [x] cvcrm_postreserva-1_api
+        * [x] cvcrm_alterarsituacao-1_api
+        * [x] cvcrm_informarvenda_api
+        * [x] cvcrm_distratoparticionado_api
+        * [x] cvcrm_distrato-3_api
+        * [x] cvcrm_getsolicitacoesdistratos_api
+        * [x] cvcrm_postsolicitardistrato_api
+        * [x] cvcrm_getcessao_api
+        * [x] cvcrm_cessao-1_api
+        * [x] cvcrm_cancelamento-3_api
+        * [x] cvcrm_getreservacontratos_api
+        * [x] cvcrm_cadastrarcontrato_api
+        * [x] cvcrm_assinturaeletronicacontrato_api
+        * [x] cvcrm_contratosassinados_api
+        * [x] cvcrm_cadastrarboleto_api
+        * [x] cvcrm_atualizarboleto_api
+        * [x] cvcrm_getlote_api
+        * [x] cvcrm_cadastrarlote_api
+        * [x] cvcrm_alterarlote_api
+        * [x] cvcrm_retornardocumento_api
+        * [x] cvcrm_cadastrardocumento_api
+        * [x] cvcrm_getreservacondicaopagamentos_api
+        * [x] cvcrm_getsiengereserva_api
+        * [x] cvcrm_putsiengereserva_api
+        * [x] cvcrm_retornarcampanha_api
+        * [x] cvcrm_post_v2_comercial_reservas_mensagens_api
+        * [x] cvcrm_get_v2_comercial_reservas_idreserva_mensagens_api
+        * [x] cvcrm_getanalisescredito_api
+        * [x] cvcrm_getkitdecoracao_api
+        * [x] cvcrm_post_v2_comercial_reservas_kit_decoracao_api
+        * [x] cvcrm_put_v2_comercial_reservas_usuario_correspondente_api
 
 26. API de Séries de Tabelas de Preços
     * [x] Séries/Tabelas de Preço
@@ -478,5 +478,5 @@ Aqui está o checklist completo com os itens que ainda não foram processados, m
         * [x] cvcrm_localidades_cidades_api
 
 32. Gestões de Time
-    * [ ] Gestões de Time
-        * [ ] cvcrm_getgestoestime_api
+    * [x] Gestões de Time
+        * [x] cvcrm_getgestoestime_api

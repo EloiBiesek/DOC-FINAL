@@ -1,0 +1,19 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/comercial/reservas/condicao-pagamentos",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "query": {
+      "idReserva": { "type": "integer", "description": "ID da reserva para retornar condições" }
+    }
+  },
+  "responses": {
+    "200": { "description": "Condições de pagamento retornadas", "body": { "condicoes": { "type": "array", "items": { "type": "object" } } } }
+  }
+}
+
+

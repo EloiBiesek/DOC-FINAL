@@ -1,0 +1,24 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/comercial/reservas/alterar-situacao",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "idReserva": { "type": "integer", "description": "ID da reserva", "required": true },
+      "idSituacao": { "type": "integer", "description": "ID da situação para alterar", "required": true }
+    }
+  },
+  "examples": {
+    "curl_with_body": "curl --request POST \\n+--url https://integracao.cvcrm.com.br/api/v1/comercial/reservas/alterar-situacao \\n+--header 'accept: application/json' \\n+--header 'content-type: application/json' \\n+--data '{\"idReserva\":123,\"idSituacao\":5}'"
+  },
+  "responses": {
+    "200": { "description": "Situação alterada" },
+    "400": { "description": "Requisição inválida" }
+  }
+}
+
+

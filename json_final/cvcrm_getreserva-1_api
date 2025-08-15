@@ -1,0 +1,23 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/comercial/reservas/{idReserva}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "path": {
+      "idReserva": { "type": "integer", "description": "ID da reserva", "required": true }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\n+--url https://integracao.cvcrm.com.br/api/v1/comercial/reservas/123 \\n+--header 'accept: application/json'"
+  },
+  "responses": {
+    "200": { "description": "Reserva retornada", "body": { "idReserva": { "type": "integer" }, "dados": { "type": "object" } } },
+    "404": { "description": "Reserva não encontrada" }
+  }
+}
+
+

@@ -1,0 +1,14 @@
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v2/comercial/reservas/analises-de-credito",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    }
+  },
+  "responses": { "200": { "description": "Análises de crédito retornadas", "body": { "analises": { "type": "array", "items": { "type": "object" } } } } }
+}
+
+

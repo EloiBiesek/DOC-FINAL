@@ -1,0 +1,25 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/precadastro/documentos",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "idprecadastro": { "type": "integer", "description": "ID do pré-cadastro", "required": true },
+      "arquivo": { "type": "string", "description": "Arquivo em base64", "required": true },
+      "nomeArquivo": { "type": "string", "description": "Nome do arquivo" }
+    }
+  },
+  "examples": {
+    "curl_with_body": "curl --request POST \\n+--url https://integracao.cvcrm.com.br/api/v1/cv/precadastro/documentos \\n+--header 'accept: application/json' \\n+--header 'content-type: application/json' \\n+--data '{\"idprecadastro\":123,\"arquivo\":\"BASE64\",\"nomeArquivo\":\"doc.pdf\"}'"
+  },
+  "responses": {
+    "201": { "description": "Documento cadastrado" },
+    "400": { "description": "Requisição inválida" }
+  }
+}
+
+

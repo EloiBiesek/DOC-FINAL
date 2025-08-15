@@ -1,0 +1,21 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/comercial/reservas/boletos",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "idBoleto": { "type": "integer", "description": "ID do boleto a ser atualizado", "required": true },
+      "arquivoBoleto": { "type": "string", "description": "Boleto em base64 atualizado", "required": true }
+    }
+  },
+  "responses": {
+    "200": { "description": "Boleto atualizado" },
+    "400": { "description": "Requisição inválida" }
+  }
+}
+
+

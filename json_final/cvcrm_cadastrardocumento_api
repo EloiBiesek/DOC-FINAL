@@ -1,0 +1,22 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/comercial/reservas/documentos",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "idReserva": { "type": "integer", "description": "ID da reserva", "required": true },
+      "arquivo": { "type": "string", "description": "Arquivo em base64", "required": true },
+      "nomeArquivo": { "type": "string", "description": "Nome do arquivo" }
+    }
+  },
+  "responses": {
+    "201": { "description": "Documento cadastrado" },
+    "400": { "description": "Requisição inválida" }
+  }
+}
+
+

@@ -1,0 +1,24 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/financeiro/lotes/{idLote}/alterar",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "path": {
+      "idLote": { "type": "integer", "description": "ID do lote a ser alterado", "required": true }
+    },
+    "body": {
+      "descricao": { "type": "string", "description": "Nova descrição do lote" },
+      "itens": { "type": "array", "description": "Itens atualizados do lote", "items": { "type": "object" } }
+    }
+  },
+  "responses": {
+    "200": { "description": "Lote alterado" },
+    "400": { "description": "Requisição inválida" }
+  }
+}
+
+

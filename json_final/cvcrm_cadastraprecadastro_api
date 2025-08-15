@@ -1,0 +1,30 @@
+{
+  "method": "POST",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cv/precadastro",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "body": {
+      "nome": { "type": "string", "description": "Nome do pré-cadastrado", "required": true },
+      "documento": { "type": "string", "description": "Documento do pré-cadastrado", "required": true },
+      "email": { "type": "string", "description": "Email do pré-cadastrado" }
+    }
+  },
+  "examples": {
+    "payload": {
+      "nome": "João Silva",
+      "documento": "12345678900",
+      "email": "joao@example.com"
+    },
+    "curl_with_body": "curl --request POST \\n+--url https://integracao.cvcrm.com.br/api/v1/cv/precadastro \\n+--header 'accept: application/json' \\n+--header 'content-type: application/json' \\n+--data '{\"nome\":\"João Silva\",\"documento\":\"12345678900\"}'"
+  },
+  "responses": {
+    "201": { "description": "Pré-cadastro criado", "body": { "idPrecadastro": { "type": "integer" } } },
+    "400": { "description": "Requisição inválida" }
+  }
+}
+
+
