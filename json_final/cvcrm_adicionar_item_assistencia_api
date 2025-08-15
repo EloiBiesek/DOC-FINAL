@@ -19,7 +19,6 @@
     "200": { "description": "Item cadastrado" },
     "400": { "description": "Erro ao cadastrar item" }
   }
-  }
 }
 
 
