@@ -1,5 +1,22 @@
 {
   "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvdw/assistencias",
+  "parameters": {
+    "headers": {
+      "authorization": { "type": "string", "description": "Bearer token" },
+      "accept": { "type": "string", "description": "application/json" }
+    },
+    "query": {
+      "idassistencia": { "type": "integer", "description": "ID da assistência" },
+      "page": { "type": "integer", "description": "Página" },
+      "size": { "type": "integer", "description": "Tamanho da página" }
+    }
+  }
+}
+
+{
+  "method": "GET",
   "baseUrl": "https://integracao.cvcrm.com.br",
   "path": "/api/v1/cvdw/assistencias",
   "parameters": {

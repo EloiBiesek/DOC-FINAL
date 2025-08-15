@@ -1,0 +1,17 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/agendamentos/pessoa/{idpessoa}/unidades-disponiveis",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário" },
+      "token": { "type": "string", "description": "Token de autenticação" },
+      "accept": { "type": "string", "description": "application/json" }
+    },
+    "pathParams": {
+      "idpessoa": { "type": "integer", "description": "ID da pessoa", "required": true }
+    }
+  }
+}
+
+

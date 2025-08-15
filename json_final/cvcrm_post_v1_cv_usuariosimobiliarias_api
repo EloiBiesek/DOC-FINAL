@@ -1,0 +1,11 @@
+{
+  "title": "Adicionar/Alterar usuário de imobiliária",
+  "method": "POST",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/usuariosimobiliarias",
+  "description": "Adicionar ou alterar usuário de imobiliária.",
+  "parameters": { "headers": { "content-type": { "type": "string", "description": "application/json" }, "accept": { "type": "string", "description": "application/json" } }, "body": { "idimobiliaria": { "type": "integer" }, "idusuario": { "type": "integer" }, "perfil": { "type": "string" } } },
+  "responses": { "200": { "description": "Usuário adicionado/alterado" } }
+}
+
+

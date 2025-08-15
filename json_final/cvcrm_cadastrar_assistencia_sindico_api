@@ -1,0 +1,32 @@
+{
+  "method": "POST",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/relacionamento/assistencias/sindico",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "documento": { "type": "string", "description": "CPF ou CNPJ do síndico sem máscara" },
+      "idsindico": { "type": "integer", "description": "ID do síndico cadastrado" },
+      "itens": { "type": "array", "description": "Array de itens da assistência", "items": { "type": "object" }, "required": true },
+      "unidade": { "type": "object", "description": "Objeto unidade" },
+      "unidade_avulsa": { "type": "object", "description": "Dados da unidade avulsa" },
+      "area": { "type": "object", "description": "Área comum relacionada" },
+      "localidade": { "type": "object", "description": "Localidade relacionada" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST --url https://{dominiodocliente}.cvcrm.com.br/api/v1/relacionamento/assistencias/sindico --header 'accept: application/json' --header 'content-type: application/json' --header 'email: usuario@email.com' --header 'token: SEU_TOKEN'",
+    "payload": {
+      "documento": "12345678900",
+      "itens": [{"descricao":"Troca de lâmpada"}],
+      "unidade": {"idunidade": 123}
+    }
+  }
+}
+
+

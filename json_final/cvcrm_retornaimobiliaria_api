@@ -1,0 +1,11 @@
+{
+  "title": "Retorna uma imobiliária cadastrada",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/imobiliaria/{id}",
+  "description": "Retorna os dados de uma imobiliária. Se id não informado, retorna todas.",
+  "parameters": { "path": { "id": { "type": "integer", "description": "ID da imobiliária" } }, "headers": { "accept": { "type": "string", "description": "application/json" } } },
+  "responses": { "200": { "description": "Dados da imobiliária ou lista", "body": { "type": ["object","array"] } } }
+}
+
+

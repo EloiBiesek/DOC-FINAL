@@ -1,0 +1,27 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cliente/agendamentos/{idunidade}/horarios",
+  "parameters": {
+    "headers": {
+      "authorization": { "type": "string", "description": "Bearer token" },
+      "accept": { "type": "string", "description": "application/json" }
+    },
+    "pathParams": {
+      "idunidade": { "type": "integer", "description": "ID da unidade", "required": true }
+    },
+    "query": {
+      "data": { "type": "string", "description": "Data (YYYY-MM-DD)" }
+    }
+  }
+  ,
+  "examples": {
+    "curl": "curl --request GET --url https://{dominiodocliente}.cvcrm.com.br/api/v1/cliente/agendamentos/{idunidade}/horarios?data=2025-01-01 --header 'accept: application/json' --header 'authorization: Bearer SEU_TOKEN'",
+    "response_example": { "horarios": ["09:00","10:00","14:30"] }
+  },
+  "responses": {
+    "200": { "description": "Horários disponíveis", "body": { "type": "object", "properties": { "horarios": { "type": "array", "items": { "type": "string" } } } } }
+  }
+}
+
+

@@ -1,0 +1,11 @@
+{
+  "title": "get gestão de cessão",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/gestoes-cessao",
+  "description": "Retorna todas as gestões de cessão cadastradas no CV.",
+  "parameters": { "headers": { "accept": { "type": "string", "description": "application/json" } } },
+  "responses": { "200": { "description": "Lista de gestões de cessão", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

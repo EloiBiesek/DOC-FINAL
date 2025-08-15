@@ -1,5 +1,20 @@
 {
   "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cliente/retornar-multiplos-portais",
+  "parameters": {
+    "headers": {
+      "accept": { "type": "string", "description": "application/json" },
+      "authorization": { "type": "string", "description": "Bearer JWT token", "required": true }
+    }
+  },
+  "responses": {
+    "200": { "description": "Domínios dos portais cadastrados", "body": { "type": "array", "items": { "type": "object" } } }
+  }
+}
+
+{
+  "method": "GET",
   "baseUrl": "https://integracao.cvcrm.com.br",
   "path": "/api/v1/cliente/retornar-multiplos-portais",
   "parameters": { "headers": { "accept": { "type": "string", "description": "application/json" } } },

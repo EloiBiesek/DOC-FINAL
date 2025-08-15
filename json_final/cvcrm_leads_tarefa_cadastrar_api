@@ -1,4 +1,14 @@
 {
+  "title": "Cadastrar tarefa de lead",
+  "method": "POST",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/cvio/lead_tarefas/cadastrar",
+  "description": "Cadastra uma tarefa de lead.",
+  "parameters": { "headers": { "content-type": { "type": "string" }, "accept": { "type": "string" } }, "body": {} },
+  "responses": { "200": { "description": "Tarefa cadastrada" } }
+}
+
+{
   "method": "POST",
   "baseUrl": "https://integracao.cvcrm.com.br",
   "path": "/api/cvio/lead_tarefas/cadastrar",

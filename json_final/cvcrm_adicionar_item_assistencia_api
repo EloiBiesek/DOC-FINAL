@@ -13,11 +13,12 @@
     "body": { "descricao": { "type": "string", "description": "Descrição do item" } }
   },
   "examples": {
-    "curl": "curl --request POST \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/assistencias/123/itens \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "descricao": "Item da assistência"\\n}'"
+    "curl": "curl --request POST \\\n  --url https://integracao.cvcrm.com.br/api/v1/relacionamento/assistencias/123/itens \\\n  --header 'accept: application/json' \\\n  --header 'content-type: application/json' \\\n  --header 'email: SEU_EMAIL' \\\n  --header 'token: SEU_TOKEN' \\\n  --data '{\n    \"descricao\": \"Item da assistência\"\n  }'"
   },
   "responses": {
     "200": { "description": "Item cadastrado" },
     "400": { "description": "Erro ao cadastrar item" }
+  }
   }
 }
 

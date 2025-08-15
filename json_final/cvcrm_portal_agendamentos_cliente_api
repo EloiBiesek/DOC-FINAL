@@ -1,0 +1,11 @@
+{
+  "title": "Retorna agendamentos ativos do cliente",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cliente/agendamentos",
+  "description": "Retorna os agendamentos ativos que o cliente está associado.",
+  "parameters": { "headers": { "authorization": { "type": "string", "description": "Bearer JWT" }, "accept": { "type": "string" } }, "query": {} },
+  "responses": { "200": { "description": "Lista de agendamentos", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

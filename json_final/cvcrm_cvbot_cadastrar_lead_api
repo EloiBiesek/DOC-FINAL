@@ -1,0 +1,40 @@
+{
+  "method": "POST",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/cvio/lead",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário que faz a requisição", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "email": { "type": "string", "description": "Email do lead - pode ser chave do lead" },
+      "telefone": { "type": "string", "description": "Telefone do lead (sem máscara)" },
+      "telefone_ddi": { "type": "string", "description": "Código DDI com + (ex: +55)" },
+      "nome": { "type": "string", "description": "Nome do lead" },
+      "idempreendimento": { "type": "array", "description": "IDs de empreendimentos associados", "items": { "type": "integer" } },
+      "idunidade": { "type": "integer", "description": "ID da unidade associada" },
+      "idsituacao": { "type": "integer", "description": "ID da situação do lead" },
+      "idusuario": { "type": "integer", "description": "ID do usuário responsável (gestor)" },
+      "idimobiliaria": { "type": "integer", "description": "ID da imobiliária" },
+      "idcorretor": { "type": "integer", "description": "ID do corretor" },
+      "origem": { "type": "string", "description": "Origem do lead" },
+      "conversao": { "type": "object", "description": "Objeto de conversão (opcional)" },
+      "interacoes": { "type": "array", "description": "Array de interações", "items": { "type": "object" } },
+      "visita": { "type": "array", "description": "Array de visitas vinculadas ao lead", "items": { "type": "object" } },
+      "permitir_alteracao": { "type": "boolean", "description": "Indica se a edição foi permitida (true/false)" }
+    }
+  },
+  "examples": {
+    "payload_minimal": { "email": "cliente@example.com", "telefone": "+5511999999999", "nome": "João Silva" },
+    "curl": "curl --request POST --url https://{dominiodocliente}.cvcrm.com.br/api/cvio/lead --header 'accept: application/json' --header 'content-type: application/json' --header 'email: usuario@email.com' --header 'token: SEU_TOKEN' --data '{\"email\":\"cliente@example.com\"}'"
+  },
+  "responses": {
+    "200": { "description": "Lead cadastrado/alterado com sucesso", "body": { "idlead": { "type": "integer" }, "codigo": { "type": "integer" }, "mensagem": { "type": "string" } } },
+    "400": { "description": "Requisição inválida" }
+  }
+}
+
+

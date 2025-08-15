@@ -1,32 +1,30 @@
 {
   "method": "GET",
   "baseUrl": "https://integracao.cvcrm.com.br",
-  "path": "/api/v1/cvdw/pesquisas/respostas",
+  "path": "/api/v1/cvdw/pesquisas/{idpesquisa}/respostas",
+  "description": "Retorna as respostas de uma pesquisa (CVDW)",
   "parameters": {
     "headers": {
+      "accept": { "type": "string", "description": "application/json" },
       "email": { "type": "string", "required": true },
       "token": { "type": "string", "required": true }
     },
-    "path": {},
-    "query": {},
-    "body": {
-      "pagina": { "type": "integer", "description": "Página desejada" },
-      "registros_por_pagina": { "type": "integer", "description": "Máximo 500" },
-      "a_partir_referencia": { "type": "integer", "description": "Retorna a partir deste id (ordenado por referencia_data)" },
-      "a_partir_data_referencia": { "type": "string", "description": "Data inicial da referência (YYYY-MM-DD)" },
-      "ate_data_referencia": { "type": "string", "description": "Data final da referência (YYYY-MM-DD)" }
+    "path": {
+      "idpesquisa": { "type": "integer", "description": "ID da pesquisa", "required": true }
     },
-    "formData": {}
-  },
-  "examples": {
-    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cvdw/pesquisas/respostas \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'",
-    "curl_with_body": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cvdw/pesquisas/respostas \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\"pagina\":1,\"registros_por_pagina\":100}'"
+    "query": {
+      "pagina": { "type": "integer" },
+      "registros_por_pagina": { "type": "integer" },
+      "idpergunta": { "type": "integer", "description": "Filtrar por pergunta (opcional)" }
+    }
   },
   "responses": {
-    "200": { "description": "Respostas das pesquisas", "body": { "type": "array" } },
-    "400": { "description": "Erro de solicitação, revise os parâmetros" },
-    "404": { "description": "Não encontrado" }
+    "200": { "description": "Lista de respostas", "body": { "type": "array", "items": { "type": "object" } } },
+    "400": { "description": "Parâmetros inválidos" },
+    "401": { "description": "Não autorizado" }
   }
 }
+
+
 
 

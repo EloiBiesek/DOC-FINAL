@@ -1,0 +1,11 @@
+{
+  "title": "Retorna horários disponíveis para agendamento em unidade",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/agendamentos/{idempreendimento}/unidade/{idunidade}/horarios",
+  "description": "Retorna os horários disponíveis para agendamento em uma determinada unidade.",
+  "parameters": { "path": { "idempreendimento": { "type": "integer" }, "idunidade": { "type": "integer" } }, "headers": { "accept": { "type": "string" } }, "query": { "data": { "type": "string", "description": "Data no formato YYYY-MM-DD" } } },
+  "responses": { "200": { "description": "Lista de horários disponíveis", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

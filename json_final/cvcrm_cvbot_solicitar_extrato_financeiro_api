@@ -1,0 +1,24 @@
+{
+  "method": "POST",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/financeiro/enviar-extrato",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "idpessoa": { "type": "integer", "description": "ID da pessoa" },
+      "idunidade": { "type": "integer", "description": "ID da unidade" },
+      "email_destino": { "type": "string", "description": "Email para envio" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request POST --url https://{dominiodocliente}.cvcrm.com.br/api/v1/cvbot/financeiro/enviar-extrato --header 'accept: application/json' --header 'content-type: application/json' --header 'email: usuario@email.com' --header 'token: SEU_TOKEN'",
+    "payload": { "idpessoa": 12345, "email_destino": "cliente@email.com" }
+  }
+}
+
+

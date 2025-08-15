@@ -1,5 +1,21 @@
 {
   "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cliente/configuracoes",
+  "parameters": {
+    "headers": {
+      "accept": { "type": "string", "description": "application/json" },
+      "authorization": { "type": "string", "description": "Bearer JWT token", "required": true }
+    }
+  },
+  "responses": {
+    "200": { "description": "Configuração ativa do painel do cliente", "body": { "type": "object" } },
+    "404": { "description": "Configuração não encontrada" }
+  }
+}
+
+{
+  "method": "GET",
   "baseUrl": "https://integracao.cvcrm.com.br",
   "path": "/api/v1/cliente/configuracoes",
   "parameters": {

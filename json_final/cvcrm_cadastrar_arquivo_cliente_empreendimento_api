@@ -1,0 +1,15 @@
+{
+  "title": "Cadastra novo arquivo de cliente no empreendimento",
+  "method": "POST",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/empreendimentos/{idempreendimento}/arquivoscliente",
+  "description": "Cadastra novo arquivo de cliente no empreendimento. Normalizado: {idempreendimento} no path.",
+  "parameters": {
+    "path": { "idempreendimento": { "type": "integer", "description": "ID do empreendimento", "required": true } },
+    "headers": { "content-type": { "type": "string", "description": "application/json" }, "accept": { "type": "string", "description": "application/json" } },
+    "body": { "arquivo": { "type": "string", "description": "Arquivo em base64 ou referência", "required": true }, "nome": { "type": "string" }, "descricao": { "type": "string" } }
+  },
+  "responses": { "200": { "description": "Arquivo cadastrado" } }
+}
+
+

@@ -1,0 +1,19 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cliente/contratos",
+  "parameters": {
+    "headers": {
+      "accept": { "type": "string", "description": "application/json" },
+      "authorization": { "type": "string", "description": "Bearer JWT token", "required": true }
+    },
+    "query": {
+      "idunidade": { "type": "integer", "description": "ID da unidade para filtrar contratos", "required": false }
+    }
+  },
+  "responses": {
+    "200": { "description": "Lista de contratos das unidades do cliente", "body": { "type": "array", "items": { "type": "object" } } }
+  }
+}
+
+

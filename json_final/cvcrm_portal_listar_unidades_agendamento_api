@@ -1,0 +1,11 @@
+{
+  "title": "Retorna unidades disponíveis para agendamento (cliente)",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cliente/agendamentos/unidades-disponiveis",
+  "description": "Retorna as unidades do cliente disponíveis para agendamento. Requer Bearer JWT.",
+  "parameters": { "headers": { "authorization": { "type": "string", "description": "Bearer JWT" }, "accept": { "type": "string" } }, "query": {} },
+  "responses": { "200": { "description": "Lista de unidades disponíveis", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

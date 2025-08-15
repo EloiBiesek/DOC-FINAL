@@ -1,0 +1,11 @@
+{
+  "title": "Retorna situações possíveis para um agendamento",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cliente/agendamentos/situacoes",
+  "description": "Retorna as situações possíveis para um agendamento.",
+  "parameters": { "headers": { "accept": { "type": "string" } } },
+  "responses": { "200": { "description": "Lista de situações", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

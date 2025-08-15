@@ -1,0 +1,20 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/agendamentos",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do gestor", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" }
+    },
+    "query": {
+      "idusuario": { "type": "integer", "description": "ID do gestor para filtrar agendamentos" },
+      "page": { "type": "integer", "description": "Página" },
+      "size": { "type": "integer", "description": "Tamanho da página" }
+    }
+  },
+  "responses": { "200": { "description": "Lista de agendamentos do gestor", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

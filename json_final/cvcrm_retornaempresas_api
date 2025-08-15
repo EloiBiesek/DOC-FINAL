@@ -1,0 +1,41 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/empresas",
+  "parameters": {
+    "headers": {
+      "accept": { "type": "string", "description": "application/json" },
+      "authorization": { "type": "string", "description": "Bearer JWT token", "required": true }
+    },
+    "query": {
+      "cnpj": { "type": "string", "description": "CNPJ para filtro", "required": false },
+      "id": { "type": "integer", "description": "ID da empresa para filtro", "required": false }
+    }
+  },
+  "responses": {
+    "200": { "description": "Lista de empresas", "body": { "type": "array", "items": { "type": "object" } } },
+    "400": { "description": "Requisição inválida" }
+  }
+}
+
+{
+  "title": "/empresas - Retorna empresas",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/empresas",
+  "description": "Retorna todas as empresas cadastradas no CV. Suporta filtros por cnpj e id.",
+  "parameters": {
+    "query": {
+      "cnpj": { "type": "string", "description": "Filtrar por CNPJ" },
+      "id": { "type": "integer", "description": "Filtrar por ID da empresa" }
+    },
+    "headers": {
+      "accept": { "type": "string", "description": "application/json" }
+    }
+  },
+  "responses": {
+    "200": { "description": "Lista de empresas", "body": { "type": "array", "items": { "type": "object" } } }
+  }
+}
+
+

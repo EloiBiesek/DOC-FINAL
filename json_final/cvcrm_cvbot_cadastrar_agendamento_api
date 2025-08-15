@@ -1,0 +1,22 @@
+{
+  "method": "POST",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/agendamentos",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "body": {
+      "idpessoa": { "type": "integer", "description": "ID da pessoa" },
+      "idunidade": { "type": "integer", "description": "ID da unidade" },
+      "data": { "type": "string", "description": "Data do agendamento (YYYY-MM-DD)", "required": true },
+      "horario": { "type": "string", "description": "Horário desejado", "required": true },
+      "tipo": { "type": "string", "description": "Tipo de agendamento (visita|vistoria)" }
+    }
+  }
+}
+
+

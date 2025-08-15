@@ -1,0 +1,11 @@
+{
+  "title": "Cancelar agendamento (cliente)",
+  "method": "PUT",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cliente/agendamentos/{idagendamento}/cancelar",
+  "description": "Cancela um agendamento (visita ou vistoria). Requer Bearer JWT.",
+  "parameters": { "path": { "idagendamento": { "type": "integer", "required": true } }, "headers": { "authorization": { "type": "string", "description": "Bearer JWT" }, "content-type": { "type": "string", "description": "application/json" } }, "body": {} },
+  "responses": { "200": { "description": "Agendamento cancelado" } }
+}
+
+

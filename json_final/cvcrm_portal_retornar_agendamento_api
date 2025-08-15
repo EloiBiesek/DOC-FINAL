@@ -1,0 +1,11 @@
+{
+  "title": "Retorna dados de um agendamento com a unidade",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cliente/agendamentos/{idagendamento}/unidade/{idunidade}",
+  "description": "Retorna dados de um determinado agendamento com a unidade. Requer autenticação Bearer JWT.",
+  "parameters": { "path": { "idagendamento": { "type": "integer" }, "idunidade": { "type": "integer" } }, "headers": { "authorization": { "type": "string", "description": "Bearer JWT" }, "accept": { "type": "string" } } },
+  "responses": { "200": { "description": "Dados do agendamento", "body": { "type": "object" } } }
+}
+
+

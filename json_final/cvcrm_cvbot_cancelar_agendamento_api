@@ -1,0 +1,30 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/agendamentos/{idagendamento}/cancelar",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "pathParams": {
+      "idagendamento": { "type": "integer", "description": "ID do agendamento a cancelar", "required": true }
+    },
+    "body": {
+      "motivo": { "type": "string", "description": "Motivo do cancelamento" }
+    }
+  }
+  ,
+  "examples": {
+    "curl": "curl --request PUT \\\n+--url https://{dominiodocliente}.cvcrm.com.br/api/v1/cvbot/agendamentos/{idagendamento}/cancelar \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: usuario@email.com' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\"motivo\":\"Cliente não compareceu\"}'",
+    "response_example": { "sucesso": true, "codigo": 200, "mensagem": "Agendamento cancelado" }
+  },
+  "responses": {
+    "200": { "description": "Agendamento cancelado com sucesso", "body": { "sucesso": { "type": "boolean" }, "codigo": { "type": "integer" }, "mensagem": { "type": "string" } } },
+    "404": { "description": "Agendamento não encontrado" }
+  }
+}
+
+

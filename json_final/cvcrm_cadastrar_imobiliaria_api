@@ -1,0 +1,11 @@
+{
+  "title": "Cadastra imobiliária",
+  "method": "POST",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/cvio/imobiliaria",
+  "description": "Interface responsável por inserir novas imobiliárias no Construtor de Vendas. Atualiza se já existir.",
+  "parameters": { "headers": { "content-type": { "type": "string", "description": "application/json" }, "accept": { "type": "string", "description": "application/json" } }, "body": { "idimobiliaria_int": { "type": "integer" }, "cnpj": { "type": "string" }, "estado": { "type": "string" } } },
+  "responses": { "200": { "description": "Imobiliária cadastrada/atualizada" } }
+}
+
+

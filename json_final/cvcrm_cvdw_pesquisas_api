@@ -2,6 +2,55 @@
   "method": "GET",
   "baseUrl": "https://integracao.cvcrm.com.br",
   "path": "/api/v1/cvdw/pesquisas",
+  "description": "Retorna as pesquisas ativas no sistema (CVDW)",
+  "parameters": {
+    "headers": {
+      "accept": { "type": "string", "description": "application/json" },
+      "email": { "type": "string", "description": "Email do usuário (administrativo)", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "query": {
+      "pagina": { "type": "integer", "description": "Número da página (opcional)", "example": 1 },
+      "registros_por_pagina": { "type": "integer", "description": "Registros por página (máx 500)", "example": 100 },
+      "ativa": { "type": "boolean", "description": "Filtrar apenas pesquisas ativas" },
+      "idpesquisa": { "type": "integer", "description": "Filtrar por ID da pesquisa" }
+    }
+  },
+  "examples": {
+    "curl": "curl --request GET \\
+--url 'https://integracao.cvcrm.com.br/api/v1/cvdw/pesquisas?pagina=1&registros_por_pagina=100' \\
+--header 'accept: application/json' \\
+--header 'email: SEU_EMAIL' \\
+--header 'token: SEU_TOKEN'"
+  },
+  "responses": {
+    "200": {
+      "description": "Lista paginada de pesquisas",
+      "body": {
+        "type": "object",
+        "properties": {
+          "pagina": { "type": "integer" },
+          "registros_por_pagina": { "type": "integer" },
+          "total_registros": { "type": "integer" },
+          "items": { "type": "array", "items": { "type": "object", "properties": {
+            "id": { "type": "integer" },
+            "titulo": { "type": "string" },
+            "ativa": { "type": "boolean" },
+            "data_inicio": { "type": "string", "description": "YYYY-MM-DD" },
+            "data_fim": { "type": "string", "description": "YYYY-MM-DD" }
+          } } }
+        }
+      }
+    },
+    "400": { "description": "Parâmetros inválidos" },
+    "401": { "description": "Não autorizado" }
+  }
+}
+
+{
+  "method": "GET",
+  "baseUrl": "https://integracao.cvcrm.com.br",
+  "path": "/api/v1/cvdw/pesquisas",
   "parameters": {
     "headers": {
       "email": { "type": "string", "required": true },

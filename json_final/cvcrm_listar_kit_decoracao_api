@@ -1,5 +1,24 @@
 {
   "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v2/cadastros/kit-decoracao",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário" },
+      "token": { "type": "string", "description": "Token de autenticação" },
+      "accept": { "type": "string", "description": "application/json" }
+    },
+    "query": {
+      "idempreendimento": { "type": "integer", "description": "Filtrar por empreendimento" }
+    }
+  },
+  "responses": {
+    "200": { "description": "Lista de kits de decoração", "body": { "type": "array", "items": { "type": "object" } } }
+  }
+}
+
+{
+  "method": "GET",
   "baseUrl": "https://integracao.cvcrm.com.br",
   "path": "/api/v2/cadastros/kit-decoracao",
   "parameters": {

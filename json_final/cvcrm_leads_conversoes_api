@@ -1,4 +1,14 @@
 {
+  "title": "Retorna conversões dos leads (CVDW)",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvdw/leads/conversoes",
+  "description": "Retorna os dados das conversões dos leads. A data de referência corresponde à data de cadastro da conversão.",
+  "parameters": { "headers": { "accept": { "type": "string" } }, "query": {} },
+  "responses": { "200": { "description": "Lista de conversões", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+{
   "method": "GET",
   "baseUrl": "https://integracao.cvcrm.com.br",
   "path": "/api/v1/cv/leads_conversoes",

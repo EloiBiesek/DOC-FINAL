@@ -18,7 +18,7 @@
     }
   },
   "examples": {
-    "curl": "curl --request PUT \\\n+--url https://integracao.cvcrm.com.br/api/v1/relacionamento/assistencias/123 \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\\n  "descricao": "Atualização da assistência"\\n}'"
+    "curl": "curl --request PUT \\\n--url https://integracao.cvcrm.com.br/api/v1/relacionamento/assistencias/123 \\\n--header 'accept: application/json' \\\n--header 'content-type: application/json' \\\n--header 'email: SEU_EMAIL' \\\n--header 'token: SEU_TOKEN' \\\n--data '{\\n  \"descricao\": \"Atualização da assistência\"\\n}'"
   },
   "responses": {
     "200": {

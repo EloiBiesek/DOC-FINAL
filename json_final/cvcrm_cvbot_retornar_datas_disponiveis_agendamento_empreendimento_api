@@ -1,0 +1,27 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/agendamentos/empreendimento/{idempreendimento}/pessoa/{idpessoa}/datas",
+  "parameters": {
+    "headers": {
+      "accept": { "type": "string", "description": "application/json" },
+      "email": { "type": "string", "description": "Email do usuário" },
+      "token": { "type": "string", "description": "Token de autenticação" }
+    },
+    "path": {
+      "idempreendimento": { "type": "integer", "description": "ID do empreendimento", "required": true },
+      "idpessoa": { "type": "integer", "description": "ID da pessoa (quando aplicável)" }
+    },
+    "query": {
+      "mes": { "type": "string", "description": "Filtro por mês YYYY-MM (opcional)" }
+    }
+  },
+  "responses": {
+    "200": {
+      "description": "Datas disponíveis para agendamento",
+      "body": { "type": "array", "items": { "type": "string", "format": "date" } }
+    }
+  }
+}
+
+

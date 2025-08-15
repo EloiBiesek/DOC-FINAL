@@ -1,0 +1,11 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvdw/assistencias/visitas/workflow/tempo",
+  "parameters": {
+    "headers": { "authorization": { "type": "string", "description": "Bearer token" }, "accept": { "type": "string", "description": "application/json" } },
+    "query": { "idvisita": { "type": "integer", "description": "ID da visita" } }
+  }
+}
+
+

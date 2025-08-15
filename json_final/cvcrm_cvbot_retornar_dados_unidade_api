@@ -1,0 +1,18 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/unidades/{idunidade}",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário" },
+      "token": { "type": "string", "description": "Token de autenticação" },
+      "accept": { "type": "string", "description": "application/json" }
+    },
+    "pathParams": {
+      "idunidade": { "type": "integer", "description": "ID da unidade", "required": true }
+    }
+  },
+  "responses": { "200": { "description": "Dados da unidade", "body": { "type": "object" } } }
+}
+
+

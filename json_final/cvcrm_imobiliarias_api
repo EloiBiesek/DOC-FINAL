@@ -1,0 +1,11 @@
+{
+  "title": "Retorna os dados das imobiliarias",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvdw/imobiliarias",
+  "description": "Retorna os dados das imobiliarias a partir dos filtros solicitados.",
+  "parameters": { "headers": { "accept": { "type": "string", "description": "application/json" } }, "query": {} },
+  "responses": { "200": { "description": "Lista de imobiliárias", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

@@ -1,5 +1,24 @@
 {
   "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cliente/comunicados",
+  "parameters": {
+    "headers": {
+      "accept": { "type": "string", "description": "application/json" },
+      "authorization": { "type": "string", "description": "Bearer JWT token", "required": true }
+    },
+    "query": {
+      "idempreendimento": { "type": "integer", "description": "Filtra comunicados por empreendimento", "required": false }
+    }
+  },
+  "responses": {
+    "200": { "description": "Lista de comunicados", "body": { "type": "array", "items": { "type": "object" } } },
+    "401": { "description": "Não autorizado" }
+  }
+}
+
+{
+  "method": "GET",
   "baseUrl": "https://integracao.cvcrm.com.br",
   "path": "/api/v1/cliente/comunicados",
   "parameters": { "headers": { "authorization": { "type": "string", "description": "Bearer <JWT>", "required": true } } },

@@ -2,30 +2,67 @@
   "method": "GET",
   "baseUrl": "https://integracao.cvcrm.com.br",
   "path": "/api/v1/cvdw/corretores",
+  "description": "Retorna a listagem de corretores com filtros e paginação (CVDW).",
   "parameters": {
     "headers": {
-      "email": { "type": "string", "required": true },
-      "token": { "type": "string", "required": true }
+      "accept": { "type": "string", "description": "application/json" },
+      "email": { "type": "string", "description": "Email do usuário (administrativo)", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true }
+    },
+    "query": {
+      "pagina": { "type": "integer", "description": "Número da página (começa em 1)", "example": 1 },
+      "registros_por_pagina": { "type": "integer", "description": "Quantidade de registros por página (máximo 500)", "example": 100 },
+      "idcorretor": { "type": "integer", "description": "Filtrar por ID do corretor" },
+      "nome": { "type": "string", "description": "Pesquisa por nome (parcial)" },
+      "idempreendimento": { "type": "integer", "description": "Filtrar por empreendimento vinculado" },
+      "a_partir_referencia": { "type": "integer", "description": "Retorna a partir desta referência (id)" },
+      "a_partir_data_referencia": { "type": "string", "description": "Data inicial da referência (YYYY-MM-DD)" },
+      "ate_data_referencia": { "type": "string", "description": "Data final da referência (YYYY-MM-DD)" },
+      "ordenar_por": { "type": "string", "description": "Campo para ordenar (ex: nome, referencia_data)", "example": "nome" },
+      "direcao": { "type": "string", "description": "Direção da ordenação (asc ou desc)", "example": "asc" }
     },
     "path": {},
-    "query": {},
-    "body": {
-      "pagina": { "type": "integer", "description": "Página desejada" },
-      "registros_por_pagina": { "type": "integer", "description": "Máximo 500" },
-      "a_partir_referencia": { "type": "integer", "description": "Retorna a partir deste id (ordenado por referencia_data)" },
-      "a_partir_data_referencia": { "type": "string", "description": "Data inicial da referência (YYYY-MM-DD)" },
-      "ate_data_referencia": { "type": "string", "description": "Data final da referência (YYYY-MM-DD)" }
-    },
+    "body": null,
     "formData": {}
   },
   "examples": {
-    "curl": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cvdw/corretores \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN'",
-    "curl_with_body": "curl --request GET \\\n+--url https://integracao.cvcrm.com.br/api/v1/cvdw/corretores \\\n+--header 'accept: application/json' \\\n+--header 'content-type: application/json' \\\n+--header 'email: SEU_EMAIL' \\\n+--header 'token: SEU_TOKEN' \\\n+--data '{\"pagina\":1,\"registros_por_pagina\":100}'"
+    "curl": "curl --request GET --url 'https://integracao.cvcrm.com.br/api/v1/cvdw/corretores?pagina=1&registros_por_pagina=100' --header 'accept: application/json' --header 'email: SEU_EMAIL' --header 'token: SEU_TOKEN',",
+    "curl_filter_by_name": "curl --request GET --url 'https://integracao.cvcrm.com.br/api/v1/cvdw/corretores?nome=Silva&registros_por_pagina=50' --header 'accept: application/json' --header 'email: SEU_EMAIL' --header 'token: SEU_TOKEN'"
   },
   "responses": {
-    "200": { "description": "Dados dos corretores", "body": { "type": "array" } },
-    "400": { "description": "Erro de solicitação, revise os parâmetros" },
-    "404": { "description": "Não encontrado" }
+    "200": {
+      "description": "Lista paginada de corretores",
+      "body": {
+        "type": "object",
+        "properties": {
+          "pagina": { "type": "integer" },
+          "registros_por_pagina": { "type": "integer" },
+          "total_registros": { "type": "integer" },
+          "total_paginas": { "type": "integer" },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "integer", "description": "ID do corretor" },
+                "nome": { "type": "string", "description": "Nome completo" },
+                "cpf_cnpj": { "type": "string", "description": "CPF ou CNPJ" },
+                "creci": { "type": "string", "description": "CRECI (quando aplicável)" },
+                "email": { "type": "string" },
+                "telefones": { "type": "array", "items": { "type": "string" } },
+                "status": { "type": "string", "description": "Ativo/Inativo" },
+                "referencia_data": { "type": "string", "description": "Data de referência (YYYY-MM-DD)" },
+                "referencia_id": { "type": "integer", "description": "Id de referência para paginação incremental" },
+                "empreendimentos_vinculados": { "type": "array", "items": { "type": "object" } }
+              }
+            }
+          }
+        }
+      }
+    },
+    "400": { "description": "Requisição inválida (parâmetros incorretos)" },
+    "401": { "description": "Não autorizado (credenciais inválidas)" },
+    "404": { "description": "Recurso não encontrado" }
   }
 }
 

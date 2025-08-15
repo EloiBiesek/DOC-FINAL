@@ -1,5 +1,23 @@
 {
   "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cliente/validar-slug/{slug}",
+  "parameters": {
+    "headers": {
+      "accept": { "type": "string", "description": "application/json" }
+    },
+    "path": {
+      "slug": { "type": "string", "description": "Slug a ser validado", "required": true }
+    }
+  },
+  "responses": {
+    "200": { "description": "Resultado da validação do slug", "body": { "type": "object" } },
+    "400": { "description": "Slug inválido" }
+  }
+}
+
+{
+  "method": "GET",
   "baseUrl": "https://integracao.cvcrm.com.br",
   "path": "/api/v1/cliente/validar-slug/{slug}",
   "parameters": { "headers": { "accept": { "type": "string", "description": "application/json" } }, "path": { "slug": { "type": "string", "required": true } } },

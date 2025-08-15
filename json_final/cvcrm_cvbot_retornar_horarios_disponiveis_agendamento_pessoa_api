@@ -1,0 +1,25 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/agendamentos/horarios",
+  "parameters": {
+    "headers": {
+      "accept": { "type": "string", "description": "application/json" },
+      "email": { "type": "string", "description": "Email do usuário" },
+      "token": { "type": "string", "description": "Token de autenticação" }
+    },
+    "query": {
+      "idpessoa": { "type": "integer", "description": "ID da pessoa (opcional)" },
+      "idunidade": { "type": "integer", "description": "ID da unidade (opcional)" },
+      "data": { "type": "string", "description": "Data no formato YYYY-MM-DD (opcional)" }
+    }
+  },
+  "responses": {
+    "200": {
+      "description": "Horários disponíveis para agendamento",
+      "body": { "type": "array", "items": { "type": "object" } }
+    }
+  }
+}
+
+

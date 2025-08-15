@@ -1,5 +1,23 @@
 {
   "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/atendimentos",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário" },
+      "token": { "type": "string", "description": "Token de autenticação" },
+      "accept": { "type": "string", "description": "application/json" }
+    },
+    "query": {
+      "page": { "type": "integer", "description": "Página" },
+      "size": { "type": "integer", "description": "Tamanho da página" }
+    }
+  },
+  "responses": { "200": { "description": "Lista de atendimentos", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+{
+  "method": "GET",
   "baseUrl": "https://integracao.cvcrm.com.br",
   "path": "/api/v1/cvbot/atendimentos",
   "parameters": {

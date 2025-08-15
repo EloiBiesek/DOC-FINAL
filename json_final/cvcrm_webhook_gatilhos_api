@@ -1,0 +1,11 @@
+{
+  "title": "Retornar Gatilhos - Webhook",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/webhook/gatilhos",
+  "description": "Retorna todos os gatilhos cadastrados no CV.",
+  "parameters": { "headers": { "accept": { "type": "string", "description": "application/json" } } },
+  "responses": { "200": { "description": "Lista de gatilhos", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

@@ -1,0 +1,21 @@
+{
+  "method": "PUT",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/lead/{idlead}/alterar_empreendimento",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" },
+      "content-type": { "type": "string", "description": "application/json" }
+    },
+    "pathParams": {
+      "idlead": { "type": "integer", "description": "ID do lead", "required": true }
+    },
+    "body": {
+      "idempreendimento": { "type": "integer", "description": "Novo ID do empreendimento", "required": true }
+    }
+  }
+}
+
+

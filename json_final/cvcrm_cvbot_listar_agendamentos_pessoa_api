@@ -1,0 +1,20 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/agendamentos/pessoa",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário", "required": true },
+      "token": { "type": "string", "description": "Token de autenticação", "required": true },
+      "accept": { "type": "string", "description": "application/json" }
+    },
+    "query": {
+      "idpessoa": { "type": "integer", "description": "ID da pessoa" },
+      "page": { "type": "integer", "description": "Página" },
+      "size": { "type": "integer", "description": "Tamanho da página" }
+    }
+  },
+  "responses": { "200": { "description": "Lista de agendamentos da pessoa", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

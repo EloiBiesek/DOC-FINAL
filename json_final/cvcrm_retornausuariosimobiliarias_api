@@ -1,0 +1,11 @@
+{
+  "title": "Retorna usuários de imobiliárias",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/usuariosimobiliarias",
+  "description": "Retorna todos os usuários de imobiliárias. Suporta filtro por documento (cpf) ou id.",
+  "parameters": { "query": { "documento": { "type": "string", "description": "CPF do usuário" }, "id": { "type": "integer", "description": "ID do usuário" } }, "headers": { "accept": { "type": "string", "description": "application/json" } } },
+  "responses": { "200": { "description": "Lista de usuários de imobiliárias", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

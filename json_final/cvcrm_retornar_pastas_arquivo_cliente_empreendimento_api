@@ -1,0 +1,14 @@
+{
+  "title": "Retorna pastas dos arquivos de cliente no empreendimento",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/empreendimentos/{idempreendimento}/arquivoscliente/pastas",
+  "description": "Retorna as pastas dos arquivos de cliente no empreendimento.",
+  "parameters": {
+    "path": { "idempreendimento": { "type": "integer", "description": "ID do empreendimento", "required": true } },
+    "headers": { "accept": { "type": "string", "description": "application/json" } }
+  },
+  "responses": { "200": { "description": "Lista de pastas", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

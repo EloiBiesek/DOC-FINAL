@@ -1,0 +1,15 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/agendamentos/todos-agendamentos",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário" },
+      "token": { "type": "string", "description": "Token de autenticação" },
+      "accept": { "type": "string", "description": "application/json" }
+    }
+  },
+  "responses": { "200": { "description": "IDs de agendamentos", "body": { "type": "array", "items": { "type": "integer" } } } }
+}
+
+

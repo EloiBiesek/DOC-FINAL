@@ -1,4 +1,22 @@
 {
+  "title": "Retorna Motivos de Cancelamento do Lead",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/motivos_cancelamento_lead",
+  "description": "Consulta motivos de cancelamento de lead. Parâmetros: pagina, registros_por_pagina, detalhamento, exibir_inativos.",
+  "parameters": {
+    "query": {
+      "pagina": { "type": "integer" },
+      "registros_por_pagina": { "type": "integer" },
+      "detalhamento": { "type": "boolean" },
+      "exibir_inativos": { "type": "boolean" }
+    },
+    "headers": { "accept": { "type": "string", "description": "application/json" } }
+  },
+  "responses": { "200": { "description": "Lista paginada de motivos", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+{
   "method": "GET",
   "baseUrl": "https://integracao.cvcrm.com.br",
   "path": "/api/v1/cv/motivos_cancelamento_lead",

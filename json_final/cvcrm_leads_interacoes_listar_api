@@ -1,0 +1,11 @@
+{
+  "title": "Retorna interações dos leads",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/leads_interacoes",
+  "description": "Retorna as interações dos leads.",
+  "parameters": { "headers": { "accept": { "type": "string" } }, "query": {} },
+  "responses": { "200": { "description": "Lista de interações", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

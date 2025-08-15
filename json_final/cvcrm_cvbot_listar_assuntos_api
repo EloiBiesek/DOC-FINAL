@@ -1,5 +1,17 @@
 {
   "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/assuntos",
+  "parameters": {
+    "headers": {
+      "accept": { "type": "string", "description": "application/json" }
+    }
+  },
+  "responses": { "200": { "description": "Lista de assuntos", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+{
+  "method": "GET",
   "baseUrl": "https://integracao.cvcrm.com.br",
   "path": "/api/v1/cvbot/assuntos",
   "parameters": {

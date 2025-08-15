@@ -1,0 +1,11 @@
+{
+  "title": "Retorna gestões de contrato",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cv/gestoes-contrato",
+  "description": "Retorna todas as gestões de contrato cadastradas no CV.",
+  "parameters": { "headers": { "accept": { "type": "string", "description": "application/json" } } },
+  "responses": { "200": { "description": "Lista de gestões de contrato", "body": { "type": "array", "items": { "type": "object" } } } }
+}
+
+

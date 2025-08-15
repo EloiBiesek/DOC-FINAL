@@ -1,0 +1,18 @@
+{
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/pessoa",
+  "parameters": {
+    "headers": {
+      "email": { "type": "string", "description": "Email do usuário" },
+      "token": { "type": "string", "description": "Token de autenticação" },
+      "accept": { "type": "string", "description": "application/json" }
+    },
+    "query": {
+      "documento": { "type": "string", "description": "CPF/CNPJ para buscar a pessoa" }
+    }
+  },
+  "responses": { "200": { "description": "Dados da pessoa", "body": { "type": "object" } } }
+}
+
+

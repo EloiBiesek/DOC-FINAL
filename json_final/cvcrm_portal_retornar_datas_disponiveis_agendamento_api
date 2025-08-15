@@ -1,0 +1,11 @@
+{
+  "title": "Retorna datas disponíveis para agendamento",
+  "method": "GET",
+  "baseUrl": "https://{dominiodocliente}.cvcrm.com.br",
+  "path": "/api/v1/cvbot/agendamentos/{idempreendimento}/pessoa/{idpessoa}/datas",
+  "description": "Retorna as datas disponíveis para agendamento de determinado empreendimento e pessoa.",
+  "parameters": { "path": { "idempreendimento": { "type": "integer" }, "idpessoa": { "type": "integer" } }, "headers": { "accept": { "type": "string" } } },
+  "responses": { "200": { "description": "Lista de datas disponíveis", "body": { "type": "array", "items": { "type": "string" } } } }
+}
+
+
